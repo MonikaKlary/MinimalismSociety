@@ -1,0 +1,15 @@
+﻿body
+{
+}
+
+#navbarFrame {
+
+}
+#logo {
+    text-align: right;
+}
+
+.jumbotron {
+    background-image: url(jumbotronBackground.jpg);
+    text-align: center;
+}
