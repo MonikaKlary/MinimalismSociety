@@ -1,15 +1,57 @@
-﻿body
-{
+﻿body {
+    background-color: white;
 }
 
-#navbarFrame {
-
-}
+/*HomePage css*/ 
 #logo {
     text-align: right;
+}
+
+.display-4 {
+    font-weight: bold; /*Title of the jumbotron edited here*/
+}
+
+.lead {
+    font-weight: bold;
+}
+
+.navbar-default {
+   
+}
+
+.btn btn-primary {
+    /*needs editing to flow better*/
 }
 
 .jumbotron {
     background-image: url(jumbotronBackground.jpg);
     text-align: center;
+    height: 650px;
+    padding: 150px;
+    border: solid 1px;
 }
+
+#email {
+    width: 300px;
+}
+
+.form-inline {
+    display: inline-block;
+    padding: 50px;
+}
+
+.container {
+    padding: 45px;
+    border: double;
+    max-width: 80%;
+}
+
+.containerFooter {
+    background-color: white;
+    padding: 5px;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+/*HomePagecss end*/
