@@ -44,17 +44,41 @@
     background-color:white;
     border-style:double;
 }
-figure1{
-float: left;
-width: 18%;
-text-align: center;
-font-style: italic;
-font-size: smaller;
-text-indent: 0;
-border: thick black solid;
-margin: 0.5em;
-padding: 0.5em;
-clear:both;
+
+.container {
+    padding: 45px;
+    border: double;
+    max-width: 80%;
+}
+
+.containerFooter {
+    background-color: white;
+    padding: 5px;
+    max-width: 100%;
+    text-align: center;
+}
+
+/*HomePagecss end*/
+
+/*Resources Page CSS*/
+
+#ResourcesHeadContainer{
+    padding: 45px;
+    border: double;
+}
+
+/*Resources Page end*/
+figure1 {
+    float: left;
+    width: 18%;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    border: thick black solid;
+    margin: 0.5em;
+    padding: 0.5em;
+    clear: both;
 }
 figure2{
 float: left;
@@ -170,21 +194,7 @@ figure11{
 }
 }
 
-.container {
-    padding: 45px;
-    border: double;
-    max-width: 80%;
-}
 
-.containerFooter {
-    background-color: white;
-    padding: 5px;
-    max-width: 100%;
-    text-align: center;
-}
-
-
-/*HomePagecss end*/
 /*ContactPageCSS begins*/
 .contact-container {
     text-align: center;
