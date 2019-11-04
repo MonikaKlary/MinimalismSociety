@@ -82,7 +82,6 @@
 
     <!--Navbar end-->
 
-
     <div id="resourcesHeadContainer">
 
         <h1 class="resourcesText">Resources</h1>
@@ -137,6 +136,84 @@
         </div>
     </div>
 
+
+
+    <div class="wholeOfSlideshowContainer">
+    <!--Quotes Slideshow with inspirational message-->
+    <div class="slideshowContainer">
+        <div class="resourcesSlides">
+            <q>“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”</q>
+            <p class="quoteAuthor">Jackie French Koller</p>
+        </div>
+    </div>
+
+    <div class="slideshowContainer">
+        <div class="resourcesSlides">
+            <q>“Have nothing in your homes that you do not know to be useful or believe to be beautiful.”</q>
+            <p class="quoteAuthor">William Morris</p>
+        </div>
+    </div>
+
+    <div class="slideshowContainer">
+        <div class="resourcesSlides">
+            <q>“One can furnish a room very luxuriously by taking out furniture rather than putting it in.” </q>
+            <p class="quoteAuthor">Francis Jourdain</p>
+        </div>
+    </div>
+
+    <!--Next/previous buttons-->
+    <a class="previous" onclick="" plusSlides(-1)">&#10094;></a>
+    <a class="next" onclick="" plusSlides(1)">&#10095;></a>
+
+    <!--Slide mark-->
+    <div class="markContainer">
+        <span class="dot" onclick="currentSlice(1)"></span>
+        <span class="dot" onclick="currentSlice(2)"></span>
+        <span class="dot" onclick="currentSlice(3)"></span>
+    </div>
+    </div>
+
+
+
+    <!--Javascript to make the slides work-->
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementByClassName("resourcesSlides");
+            var dots = document.getElementByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slide.length;
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; dots.length; i++) {
+                dots[i].className = dots[i].className.replace("active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
 
 
     <!--Footer for all the pages-->
