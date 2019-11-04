@@ -55,6 +55,7 @@
 
 /*HomePagecss end*/
 
+
 /*Resources Page - Monika*/
 
 #resourcesHeadContainer{
@@ -75,10 +76,80 @@
     list-style-type: none;
 }
 
+.slideshowContainer {
+    position: relative;
+    background-color: lightgrey;
+}
+
+.resourcesSlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.markContainer {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/*Adds colour to active dot*/
+.active, .dot:hover {
+        background-color: #717171;
+}
+
+q {
+    font-style: italic;
+}
+
+.quoteAuthor {
+    color: dodgerblue;
+}
+
+.wholeOfSlideshowContainer{
+    position: relative;
+    height: 100px;
+}
 /*Resources Page End*/
 
-/*FAQ - Calum*/
 
+/*FAQ - Calum*/
 /*Stores all the different containers for the page*/
 .faq {
     /*sets colours and size for the container*/
@@ -189,6 +260,8 @@
 
     /*FAQ End*/
 
+
+
 /*ContactPageCSS - Paige*/
 .contact-container {
     text-align: center;
@@ -196,6 +269,8 @@
 }
 
 /*Contact Us Ends*/
+
+
 
 /*Image Gallery Page - Siddharth*/
 
