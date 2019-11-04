@@ -64,8 +64,11 @@
 }
 
 .containerResourcesColumns {
-    border: double;
     text-align: center;
+}
+
+.resourcesBooksImage {
+    border-radius: 10%;
 }
 
 .resourcesText {
@@ -76,6 +79,9 @@
     list-style-type: none;
 }
 
+.col-sm {
+    border: double;
+}
 .slideshowContainer {
     position: relative;
     background: whitesmoke;
