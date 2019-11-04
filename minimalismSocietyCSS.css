@@ -78,7 +78,8 @@
 
 .slideshowContainer {
     position: relative;
-    background-color: lightgrey;
+    background: whitesmoke;
+    border: double;
 }
 
 .resourcesSlides {
