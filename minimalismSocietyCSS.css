@@ -278,7 +278,9 @@ q {
 /*ContactPageEnds*/
 
 /*AboutUsPageCSS - Paige*/
-
+.AboutUs-container {
+    text-align: center;
+    background-color: #DEF2F1;
 /*AboutUsPageEnds*/
 
 
