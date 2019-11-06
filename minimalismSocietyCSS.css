@@ -281,12 +281,10 @@ q {
 .AboutUs-container {
     text-align: center;
     background-color: #DEF2F1;
+    padding: 35px;
     border: double;
 }
 
-.AboutUsText {
-    padding: 45px;
-}
 /*AboutUsPageEnds*/
 
 
