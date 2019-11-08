@@ -81,6 +81,77 @@
     </nav>
 
     <!--Navbar end-->
+    
+        <link rel="stylesheet" href="volunteering.css" type="text/css">
+    <h1>VOLUNTEER WITH US!</h1>
+    <body>
+        <div id="bg-test">
+        </div>
+        <p><b>Have you got time,energy or expertise to share?</b></p>
+        <div class="introduction">
+        <p>Volunteers make an enormous contribution to the work of making of a minimalist society, and we very much value all the support you give us. There are many, many ways you can make a difference as we work together to improve the lives of vulnerable people around the world.</p>
+
+         <p>We are currently looking for an enthusiastic and motivated individual with relevant expertise to join our Board of Trustees.
+            
+            Do you have first-hand experience of living as a minimalist?
+            If you are interested, please do get in touch by phoning 020 020 31 020 or emailing at minimalismsociety@ymail.com  Thankyou!</p>
+         </div>
+       
+            <ul class="a">
+                    <p><b>Other volunteer roles include:</b>
+                 <li><b>CHARITY SHOPS-</b>We have our own office in Robert Gordon University in kaim cottage.</li>
+                 <li><b>HOME OFFICE-</b> Do you have expertise in finance, marketing, law, IT or other professional fields, which you feel able to share with us? Would you like to gain experience in these or other relevant areas? Or could you help with general administrative tasks? We are always grateful for volunteer support to work alongside our small, but dedicated, staff team.</li>
+                 <li><b>FUND RAISING FRIENDS-</b>We have some amazing volunteer groups running fun and exciting initiatives to raise money for our work. Whether that’s a coffee morning, a Fun Run, a Bake-Off or a Bonfire Banquet, you’ll have loads of fun and raise money for a very good cause. </li>
+                 <li><b>TRAVELLING-</b>There are a limited number of opportunities for sponsors and donors to visit some of our projects. We like giving people the opportunity to see for themselves how their money is being spent!</li>
+             </ul>
+         </p>
+
+         <h2>If you like to volunteer with us. Please fill the form below with your login credentials and be with us!</h2>
+
+         <h1>Volunteering Form</h1>
+
+         <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content animate" action="Actionpage.html">
+    <div class="imgcontainer">
+      <img src="avatar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+    var modal = document.getElementById('id01');
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+        
+    </body>
 
 
 
