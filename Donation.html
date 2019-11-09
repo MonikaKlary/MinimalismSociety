@@ -82,19 +82,69 @@
 
     <!--Navbar end-->
 
+<!--Creates a container for the donation information-->
+<div class="donateHeader-container">
+    <div class="donate-container">
+        <div class="donate"><h1>Donate To Local Charity Shops</h1></div>
 
+        <div class="donate-para"><p>Donate to local charity shops, items which you do not want anymore. Some of the available chairty shops are locted in the link below:</p></div>
+        <div class="charityLink">
+            <div class="donate-link"><a href="https://www.oxfam.org.uk/">Oxfam</a></div>
+            <div class="donate-link"></div><a href="https://www.salvationarmy.org.uk/">Salvation Army</a></div>
+            <div class="donate-link"><a href="https://www.barnardos.org.uk/">Barnardos</a></div>
+            <div class="donate-para"><p>If you can not find any of the following websites, you can find your local charity shop using this website:</p></div>
+            <div class="donate-link"><a href="https://www.charityretail.org.uk/find-a-charity-shop/">Here</a></div>
+        </div>
+    </div>
+</div>
 
+<!--Creates a container for the amount you want to give to our group-->
+<div class="donation-container">
+    <div class="donation-box">
+        <div class="title">Donation Information</div>
 
+        <!--Allows you to enter certain information into text boxes-->
+        <div class="fields">
+            <input type="text" id="firstname" placeholder="First Name"></input>
+            <input type="text" id="lastName" placeholder="Last Name"></input>
+            <input type="text" id="email" placeholder="Email"></input>
+        </div>
+        
+        <!--Allows you to create an amount that you want to have and set your own amount you want to donate-->
+        <div class="amount">
+            <div class="button">£10</div>
+            <div class="button">£20</div>
+            <div class="button">£50</div>
+            <div class="button">£<input type="text" class="setAmount" placeholder=""></input></div>    
+        </div>
 
+        <!--Allows you to choose between two different choices, monthly or once-->
+        <div class="switch">
+            <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked>
+            <label for="one-time" class="switch-input switch-label-off">One-Time</label>
+            <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly" checked>
+            <label for="one-time" class="switch-input switch-label-on">Monthly</label>
+            <span class="switch-selection"></span>
+        </div>
 
+        <!--Be able to check what you want when donating-->
+        <div class="checkboxes">
+            <input type="checkbox" id="receipt" class="checkbox"/>
+            <label for="receipt">Email Me A Receipt</label>
+            <br />
+            <input type="checkbox" id="anon" class="checkbox"/>
+            <label for="anon">Give Anonymously</label>
+            <br />
+            <input type="checkbox" id="list" class="checkbox"/>
+            <label for="list">Add Me To Email List</label>
+        </div>
 
+        <!--Creates the comfirm donation button-->
+        <div class="confirm"></div>
 
-
-
-
-
-
-
+        <div class="donate-button">Donate Now</div>
+    </div>
+</div>
 
     <!--Footer for all the pages-->
 
