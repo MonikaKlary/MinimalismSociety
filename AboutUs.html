@@ -94,21 +94,64 @@
             max-width: 100%;
             color: #17252A;
             text-align: center;
+            clear: both;
         }
 
        /*NavBar and Footer, end-Monika*/
 
 
        
-/*AboutUsPageCSS - Paige*/
-.AboutUs-container {
-    text-align: center;
-    background-color: #DEF2F1;
-    padding: 35px;
-    border: double;
-}
+        /*AboutUsPageCSS - Paige*/
 
-/*AboutUsPageEnds*/
+         #aboutUsHeadContainer {
+            margin-top: 0;
+            padding: 30px;
+            border: 2px solid;
+            text-align: center;
+        }
+
+        .aboutUsText {
+            color: #17252A;
+            font-weight: bold;
+           letter-spacing: 3px;
+
+        }
+
+        .logoHeader {
+            height: 300px;
+            width: 600px;
+        }
+
+        #aboutUsPageContainer {           
+            padding: 0 200px 0 200px;
+        }
+
+        .quoteStyle {
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .aboutUsPicture {
+            float: left;
+            border: double 5px;;
+            width: 57%;
+            margin: 10px;
+        }
+
+        .aboutUsContentRow::after{ /*Creates the two column style layout*/
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .aboutUsContentContainer {
+            width: 40%;
+            float: right;
+        }
+
+
+        /*AboutUsPageEnds*/
 
 
 
@@ -155,12 +198,37 @@
 
 
 
-    <div class="AboutUs-container">
+    <div id="aboutUsHeadContainer">
+        <img src="LogoHeader.png" class="logoHeader" />
+        <h1 class="aboutUsText">About Us</h1>
+        <p class="aboutUsText">How did Minimalism Society start</p>
+    </div>
 
-        <h1 class="AboutUsText">About Us</h1>
 
-        <p class="AboutUsText">Get to know more about our society!</p>
+    <div id="aboutUsPageContainer">
+        <div>
+            <h3 class="quoteStyle">"A journey of a thousand miles begins with a single step."</h3>
+        </div>
 
+
+        <div class="aboutUsContentRow">
+            <img src="aboutUsPic.jpg" class="aboutUsPicture" />
+
+
+            <div class="aboutUsContentContainer">
+                <div class="aboutContent">
+                    <h3>Our Story</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
