@@ -268,6 +268,248 @@ q {
 
     /*FAQ End*/
 
+/*DonatePageCSS - Calum*/
+/*Sets the postion of the donation container*/
+.donateHeader-container{
+    width: 50%;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+}
+
+/*The charity shop donate container all the characteristics of it stored here*/
+.donate-container{
+    width: 50%;
+    height: 50%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: inherit;
+    text-align: center;
+    padding: 12px;
+    background: #ddd;
+    border: double black;
+}
+
+/*Sets the headers colour and position*/
+.donate-container .donate{
+    text-align: center;
+    color: #3AAFA9;
+}
+
+/*Sets the paragraphs colour and position*/
+.donate-container .donate-para{
+    color: #17252A;
+    text-align: center;
+}
+
+/*Sets the link colour and postion*/
+.donate-container .charityLink{
+    color: #17252A;
+    text-align: center;
+}
+
+/*Sets the postion of the donation container*/
+.donation-container {
+    width: 50%;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+/*Sets the width of all the items within the container*/
+.donation-box {
+    width: 50%;
+    height: 50%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    margin-left: inherit;
+    margin-right: auto;
+    padding: 12px;
+    background: #ddd;
+    border: double black;
+}
+
+/*Sets up the way that the title looks within the container*/
+.donation-box .title {
+    background-color: #DEF2F1;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #3AAFA9;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+/*Sets the postion and the look of the donation button*/
+.donation-box .donate-button {
+    background-color: #DEF2F1;
+    width: 95%;
+    color: #3AAFA9;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+/*Sets the size of the text boxes so the fit in the container properly*/
+.donation-box .fields {
+    width: 60%;
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+/*Sets up what can be written inside the text boxes*/
+.donation-box .fields input {
+    width: 90%;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 4px;
+    border-width: 0px;
+    color: #FEFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Sets up the postion of the donation amounts buttons*/
+.donation-box .amount {
+    width: 30%;
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+}
+
+/*Sets up the way the donation amounts buttons look*/
+.donation-box .amount .button {
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #3AAFA9;
+    padding: 15px 0px 15px 0px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*Sets the colour of the donation amounts boxes when you hover over them*/
+.donation-box .amount .button:hover {
+    background-color: #DEF2F1;
+}
+/*Sets the colour of the donation amounts boxes when you click on the button*/
+.donation-box .amount .button.selected{
+    background-color: #DEF2F1;
+}
+
+/*Sets up the look of the button for the input amount*/
+.donation-box .amount .button input {
+    min-width: 34px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    color: #17252A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    border-bottom: 2px dotted #DEF2F1;
+}
+
+/*Sets the position of the input amount button*/
+.setAmount {
+    max-width: 96px;
+}
+
+/*Sets up the different options between monthly and one time*/
+.switch {
+    position: absolute;
+    top: 190px;
+    left: 15px;
+    margin: 20px auto;
+    height: 26px;
+    width: 54%;
+    background: #FEFFFF;
+    border-radius: 3px;
+    color: #17252A;
+}
+
+/*sets the postion of the checkboxes*/
+.checkboxes {
+	position: absolute;
+	top: 242px;
+	left: 13px;
+}
+
+/*Sets postion of text of the checkboxes*/
+.checkboxes label {
+	position: relative;
+	top: -8px;
+	font-size: 13px;
+	color: #17252A;
+}
+
+/*Sets the look of the checkboxes*/
+.checkbox {
+	-webkit-appearance: inherit;
+	background-color: #def2f1;
+	border: 1px solid #2B7A7B;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Sets the look of the checkboxes when clicked on*/
+.checkbox:checked {
+	background-color: #2B7A7B;
+	border: 1px solid #2B7A7B;
+}
+
+/*Sets the postion of the comfirm button and text colour*/
+.confirm {
+	position: absolute;
+    font-size: 16px; 
+    text-align: center;
+}
+
+/*Sets the donation button to be able to be clickable*/
+.confirm .donate-button {
+    background-color: #DEF2F1;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #17252A;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+    /*DonationPageEnds*/
 
 
 /*ContactPageCSS - Paige*/
