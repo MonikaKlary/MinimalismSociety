@@ -99,8 +99,50 @@
 
        /*NavBar and Footer, end-Monika*/
 
+        #resourcesHeadContainer {
+            margin-top: 0;
+            padding: 30px;
+            border: 2px solid;
+            text-align: center;
+        }
 
+        .resourcesText {
+            color: #17252A;
+            font-weight: bold;
+           letter-spacing: 3px;
 
+        }
+
+        .logoHeader {
+            height: 300px;
+            width: 600px;
+        }
+
+        .cardDeckContainerResources {
+            padding: 5px;
+            color: #DEF2F1;
+        }
+
+        .card {
+            background-color: #17252A;
+            border: black solid 2px;
+        }
+
+        #YTSectionHeader {
+            border: 2px solid;
+            padding: 25px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #ytVideosContainer {
+            position: relative;
+        }
+        .ytVideos {
+            padding: 35px;
+            display: inline-block;
+        }
 
     </style>
 
@@ -142,150 +184,126 @@
 
     <!--NavBar HTML-Monika-->
 
-
-
-
-
-
-
     <div id="resourcesHeadContainer">
 
+        <img src="LogoHeader.png" class="logoHeader" />
         <h1 class="resourcesText">Resources</h1>
         <p class="resourcesText">Learn more about minimalism!</p>
 
     </div>
 
-    <div class="containerResourcesColumns">
-        <div class="row">
 
-            <div class="col-sm">
-                <h5 class="resourcesSubTitles">Books about minimalism:</h5>
-                <ul class="resourcesListStyle">
-                    <li>"Goodbye Things:On Minimalist Living" by Fumio Sasaki</li>
-                    <li>"The Joy Of Less" by Francine Jay</li>
-                    <li>"The Paradox of Choice: Why More Is Less" by Barry Schwartz</li>
-                    <li>"Essentialism:The Disciplined Pursuit of Less" by Greg McKeown</li>
-                    <li>"A Simplified Life:Tactical Tools for Intentional Living" by Emily Ley</li>
-                    <li>"The Life-Changing Magic of Tidying Up" by Marie Kondo</li>
-                    <li>"Minimalism:Live a Meaningful Life" by Joshua Fields Millburn and Ryan Nicodemus</li>
-                </ul>
-                <p>For more books on minimalism join our Book Club every Wednesday at 5pm, University Library.</p>
-                <img src="booksOnMinimalism.jpg" />
+    <div class="cardDeckContainerResources">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="book1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
+                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding a multipurpose for singular items. Give it a go creating your own capsule: <br /> https://www.whowhatwear.co.uk/how-to-capsule-wardrobe </p>
+                </div>
             </div>
 
-            <div class="col-sm">
-                <h5 class="resourcesSubTitles">Youtube chanels about minimalism:</h5>
-                <ul class="resourcesListStyle">
-                    <li><a href="https://www.youtube.com/channel/UC5c3csRaQTw9ZnHge1mTw4A">Simple Happy Zen</a></li>
-                    <li><a href="https://www.youtube.com/user/blackboxfilmcompany">Matt D'Avella</a></li>
-                    <li><a href="https://www.youtube.com/user/jmillburn">The Minimalists</a></li>
-                    <li><a href="https://www.youtube.com/channel/UC4CpQoAPJNGGUPG92Fbwxqw">Madeleine Olivia</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCES8U3Hy6VUxU0kwKBdxSWQ">Heal Your Living</a></li>
-                    <li><a href="https://www.youtube.com/channel/UClNIeJHSOg6AhbkoLjD3iWw">Abundantly Minimal</a></li>
-                    <li><a href="https://www.youtube.com/user/SimpleCentral">Janell Kristina</a></li>
-                </ul>
-                <p>Check out these Youtube chanels for more inspiration!</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tG2GJZcBKOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="card">
+                <img class="card-img-top" src="youtuber1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Meet Like-Minded People</h5>
+                    <p class="card-text">Join us today, and meet people who share your passion. Maybe even apply to be part of our comitee! Email us at: <br /> minimalism.society@rgu.ac.uk</p>
+                </div>
             </div>
-
-            <div class="col-sm">
-                <h5 class="resourcesSubTitles">Blogs about minimalism:</h5>
-                <ul class="resourcesListStyle">
-                    <li><a href="https://theartofsimple.net/">The Art of Simple</a></li>
-                    <li><a href="https://www.becomingminimalist.com/">BecomingMinimalist</a></li>
-                    <li><a href="https://bemorewithless.com/project-333/">BeMoreWithLess-Project333</a></li>
-                    <li><a href="http://www.missminimalist.com/">MissMinimalist</a></li>
-                    <li><a href="https://nosidebar.com/">NoSidebar-Minimalist Magazine</a></li>
-                    <li><a href="https://slowyourhome.com/">Slow Your Home</a></li>
-                    <li><a href="https://www.asmallwardrobe.com/">A Small Wardrobe</a></li>
-                </ul>
-                <img src="minimalistBlog.jpg" />
+            <div class="card">
+                <img class="card-img-top" src="blog1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Get Involved In Our Projects</h5>
+                    <p class="card-text">If you have passion for events planning and eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at Student Union and we will get in touch with you.</p>
+                </div>
             </div>
         </div>
     </div>
 
 
 
-    <div class="wholeOfSlideshowContainer">
-        <!--Quotes Slideshow with inspirational message-->
-        <div class="slideshowContainer">
-            <div class="resourcesSlides">
-                <q>“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”</q>
-                <p class="quoteAuthor">Jackie French Koller</p>
+    <div class="cardDeckContainerResources">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="youtuber2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
+                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding a multipurpose for singular items. Give it a go creating your own capsule: <br /> https://www.whowhatwear.co.uk/how-to-capsule-wardrobe </p>
+                </div>
             </div>
-        </div>
-
-        <div class="slideshowContainer">
-            <div class="resourcesSlides">
-                <q>“Have nothing in your homes that you do not know to be useful or believe to be beautiful.”</q>
-                <p class="quoteAuthor">William Morris</p>
+            <div class="card">
+                <img class="card-img-top" src="book2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Meet Like-Minded People</h5>
+                    <p class="card-text">Join us today, and meet people who share your passion. Maybe even apply to be part of our comitee! Email us at: <br /> minimalism.society@rgu.ac.uk</p>
+                </div>
             </div>
-        </div>
-
-        <div class="slideshowContainer">
-            <div class="resourcesSlides">
-                <q>“One can furnish a room very luxuriously by taking out furniture rather than putting it in.” </q>
-                <p class="quoteAuthor">Francis Jourdain</p>
+            <div class="card">
+                <img class="card-img-top" src="youtuber3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Get Involved In Our Projects</h5>
+                    <p class="card-text">If you have passion for events planning and eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at Student Union and we will get in touch with you.</p>
+                </div>
             </div>
-        </div>
-
-        <!--Next/previous buttons-->
-        <a class="previous" onclick="" plusSlides(-1)">&#10094;></a>
-        <a class="next" onclick="" plusSlides(1)">&#10095;></a>
-
-        <!--Slide mark-->
-        <div class="markContainer">
-            <span class="dot" onclick="currentSlice(1)"></span>
-            <span class="dot" onclick="currentSlice(2)"></span>
-            <span class="dot" onclick="currentSlice(3)"></span>
         </div>
     </div>
 
 
-
-    <!--Javascript to make the slides work-->
-    <script type="text/javascript">
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementByClassName("resourcesSlides");
-            var dots = document.getElementByClassName("dot");
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-
-            if (n < 1) {
-                slideIndex = slide.length;
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            for (i = 0; dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active", "");
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-    </script>
+    <div class="cardDeckContainerResources">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="blog2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
+                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding a multipurpose for singular items. Give it a go creating your own capsule: <br /> https://www.whowhatwear.co.uk/how-to-capsule-wardrobe </p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="youtuber4.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Meet Like-Minded People</h5>
+                    <p class="card-text">Join us today, and meet people who share your passion. Maybe even apply to be part of our comitee! Email us at: <br /> minimalism.society@rgu.ac.uk</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="book3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Get Involved In Our Projects</h5>
+                    <p class="card-text">If you have passion for events planning and eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at Student Union and we will get in touch with you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    <!--Footer for all the pages-->
+    <div id="YTSectionHeader">
+
+        <h1 class="">Check This Videos Out To Get You Started:</h1>
+
+
+    </div>
+
+    <div id="ytVideosContainer">
+
+        <div class="ytVideos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tG2GJZcBKOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Description</p>
+        </div>
+
+        <div class="ytVideos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tG2GJZcBKOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Description</p>
+        </div>
+
+        <div class="ytVideos">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tG2GJZcBKOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Description</p>
+        </div>
+
+    </div>
+
+
+     <!--Footer for all the pages-->
 
     <div class="containerFooter">
 
