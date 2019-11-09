@@ -100,6 +100,26 @@
 
        /*NavBar and Footer, end-Monika*/
 
+         #newsHeadContainer {
+            margin-top: 0;
+            padding: 30px;
+            border: 2px solid;
+            text-align: center;
+        }
+
+        .newsText {
+            color: #17252A;
+            font-weight: bold;
+           letter-spacing: 3px;
+
+        }
+
+        .logoHeader {
+            height: 300px;
+            width: 600px;
+        }
+
+
        /*News CSS*/
 
        body {
@@ -139,7 +159,7 @@
  
 <body>
 
-     <!--NavBar HTML-Monika-->
+    <!--NavBar HTML-Monika-->
     <header>
         <div class="containerNav">
 
@@ -173,33 +193,40 @@
 
     <!--NavBar HTML-Monika-->
 
+    <div id="newsHeadContainer">
+        <img src="LogoHeader.png" class="logoHeader" />
+        <h1 class="newsText">About Us</h1>
+        <p class="aboutUsText">How did Minimalism Society start</p>
+    </div>
 
 
 
 
-<body>
-   
-   </div>
 
-<div style="padding:15px 15px 2500px;font-size:30px">
-  
-  <p> Here will be inserted images with the scroll down menu, with description below for each image based on our news.</p>
-</div>
 
-<script>
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
+    <body>
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-}
-</script>
+        </div>
 
-</body>
+        <div style="padding:15px 15px 2500px;font-size:30px">
+
+            <p> Here will be inserted images with the scroll down menu, with description below for each image based on our news.</p>
+        </div>
+
+        <script>
+            // When the user scrolls down 20px from the top of the document, slide down the navbar
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-50px";
+                }
+            }
+        </script>
+
+    </body>
 </html>
 
 
