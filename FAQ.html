@@ -9,135 +9,307 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="minimalismSocietyCSS.css" />
-
     <title>Minimalism Society</title>
+
+    <style>
+        
+        /*NavBar-Monika*/
+        body {
+            margin: 0;
+            background: #DEF2F1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .containerNav {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #17252A;
+        }
+
+        header::after {
+           content: '';
+           display: table; /*This allows the header container to be displayed properly*/
+           clear: both;
+        }
+
+        .logo {
+            float: left;
+            height: 80px;
+            width: 180px;
+        }
+
+        nav {
+            float: right;
+        }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            nav li {
+                display: inline-block; /*Makes nav sections go next to each other*/
+                margin-left: 30px;
+                padding-top: 23px;
+                position: relative; /*Allows the nav a elements to remain within the li*/
+            }
+
+            nav ul li a {
+                color: #DEF2F1;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+        .socialMediaIcons {
+            float: right;
+            padding: 23px 0;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #DEF2F1;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms; /*animates the bar above selected page at slower rate*/
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        .containerFooter {
+            padding: 5px;
+            max-width: 100%;
+            color: #17252A;
+            text-align: center;
+        }
+
+       /*NavBar and Footer, end-Monika*/
+
+       
+/*FAQ - Calum*/
+/*Stores all the different containers for the page*/
+/*Stores all the different containers for the page*/
+.faq{
+    /*sets colours and size for the container*/
+    background-color: #FEFFFF;
+}
+
+/*Centers the heading of the page*/
+.faqs-header{
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: #3AAFA9;
+    border: double black thick;
+}
+
+.faqsmain-container{
+    border: double black thick;
+}
+
+/*Centers the answers*/
+.faqs-container p{
+    text-align: center;
+}
+
+/*Adds some spacing between the questions*/
+.faqs-container{
+    margin: 40px 0;
+    position: relative;
+}
+
+/*Allows the answers to be hidden*/
+.faqs-container p{
+    display: none;
+}   
+
+/*Allows the checkboxes to be hidden */
+.faqs-container input{
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;         
+    margin: 0;          
+    width: 100%;
+    height: 10px;
+}
+
+/*Show only the clipped intro*/
+.faqs-container label{
+    text-align: center;
+    display: block; 
+    color: #17252A; /*sets a color for the questions*/
+    font-size: .85em;
+    transition: all .15s ease-out;
+    /*prevents the code wrapping*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;                       
+} 
+
+/*If the question is clicked on it will show the answer*/
+.faqs-container input[type=checkbox]:checked~p{
+    display: block;
+    color: #17252A; /*sets a color for the answers*/
+    font-size: 20px;
+    /*prevents the code wrapping*/
+    text-overflow: clip; 
+    white-space: normal;
+    overflow: visible;  
+    background-color: #DEF2F1;
+    width: relative;
+    height: 10%;
+}
+
+/*setting up the label inside the container*/
+.faqs-container label{
+    font-size: 25px;
+    background-color: #2B7A78;
+    display: block!important;
+    position: relative;
+    height: 46px;
+    padding: 7px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-left: 3px solid black;
+    transition: all .15s ease-out;          
+}
+
+/*the labels arrow, should be in the normal mode */
+.faqs-container label::before{
+    /*setting up the way the arrow looks in normal mode on the right*/
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -5px;
+    border: 12px solid transparent;
+    border-left-color: inherit; 
+}
+
+/*Update the right arrow*/
+.faqs-container input[type=checkbox]:checked~label::before{
+    /*setting up the way the arrow looks after it has been clicked on the right*/
+    border: 12px solid transparent;
+    border-top-color: inherit;
+    margin-top: -5px;
+    right: 10px;    
+}
+
+    /*FAQ End*/
+
+
+    </style>
 
 </head>
 
 <body>
 
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
-    <!--Navbar for all the pages-Monika-->
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
+    <!--NavBar HTML-Monika-->
+    <header>
+        <div class="containerNav">
 
-    <nav class="navbar navbar-default">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">HomePage</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="AboutUs.html">About Us</a>
-
-                    <a class="dropdown-item" href="CurrentMembers.html">Current Members</a>
-
-                    <a class="dropdown-item" href="FAQ.html">FAQ</a>
+            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" /> <!--alt provides alternative if logo can't be displayed-->
 
 
-                </div>
-            </li>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Members</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">What's On</a></li>
+                    <li><a href="">Donation</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Chat Room</a></li>
+                    <li><a href="">Volunteer</a></li>
+                </ul>
+            </nav>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="socialMediaIcons">
+                <a href=""><img src="facebook.png" alt="FB" /></a>
+                <a href=""><img src="instagram.png" alt="IG" /></a>
+                <a href=""><img src="twitter.png" alt="twitter" /></a>
+            </div>
+        </div>
+    </header>
 
-                <div class="dropdown-menu">
+    <!--NavBar HTML-Monika-->
 
-                    <a class="dropdown-item" href="Gallery.html">Gallery</a>
-
-                    <a class="dropdown-item" href="Resources.html">Resources</a>
-
-                    <a class="dropdown-item" href="News.html">News</a>
-
-                    <a class="dropdown-item" href="EventsCalendar.html">What's On(Events calendar)</a>
-
-                    <a class="dropdown-item" href="Donation.html">Donation</a>
-
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="ContactUs.html">Contact Us</a>
-
-                    <a class="dropdown-item" href="ChatRoom.html">Chat room</a>
-
-                    <a class="dropdown-item" href="VolunteerWithUs.html">Volunteer with us</a>
-
-                </div>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-brand">Minimalism Society</a></li>
-        </ul>
-    </nav>
-
-    <!--Navbar end-->
 
     <!--creates the container for the page-->
-<div class="faq">
-    <!--creates a container for the header-->
-    <div class="faqs-header"><h1>FAQ's</h1></div>
+    <div class="faq">
+        <!--creates a container for the header-->
+        <div class="faqs-header"><h1>FAQ's</h1></div>
         <div class="faqsmain-container">
-                <!--creates a container for the first question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question1">
-                        <label for="question1">Question 1</label>
-                        <p>Answer 1</p>
-                </div>
-                <!--creates a container for the second question-->
-                <div class="faqs-container"> 
-                        <input type="checkbox" class="faqs-input" id="question2">
-                        <label for="question2">Question 2</label>
-                        <p>Answer 2</p>
-                </div>
-                <!--creates a container for the third question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question3">
-                        <label for="question3">Question 3</label>
-                        <p>Answer 3</p>
-                </div>
-                <!--creates a container for the forth question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question4">
-                        <label for="question4">Question 4</label>
-                        <p>Answer 4</p>
-                </div>
-                <!--creates a container for the fifth question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question5">
-                        <label for="question5">Question 5</label>
-                        <p>Answer 5</p>
-                </div>
-                <!--creates a container for the sixth question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question6">
-                        <label for="question6">Question 6</label>
-                        <p>Answer 6</p>
-                </div>
-                <!--creates a container for the seventh question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question7">
-                        <label for="question7">Question 7</label>
-                        <p>Answer 7</p>
-                </div>
-                <!--creates a container for the eighth question-->
-                <div class="faqs-container">
-                        <input type="checkbox" class="faqs-input" id="question8">
-                        <label for="question8">Question 8</label>
-                        <p>Answer 8</p>
-                </div>
+            <!--creates a container for the first question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question1">
+                <label for="question1">Question 1</label>
+                <p>Answer 1</p>
+            </div>
+            <!--creates a container for the second question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question2">
+                <label for="question2">Question 2</label>
+                <p>Answer 2</p>
+            </div>
+            <!--creates a container for the third question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question3">
+                <label for="question3">Question 3</label>
+                <p>Answer 3</p>
+            </div>
+            <!--creates a container for the forth question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question4">
+                <label for="question4">Question 4</label>
+                <p>Answer 4</p>
+            </div>
+            <!--creates a container for the fifth question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question5">
+                <label for="question5">Question 5</label>
+                <p>Answer 5</p>
+            </div>
+            <!--creates a container for the sixth question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question6">
+                <label for="question6">Question 6</label>
+                <p>Answer 6</p>
+            </div>
+            <!--creates a container for the seventh question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question7">
+                <label for="question7">Question 7</label>
+                <p>Answer 7</p>
+            </div>
+            <!--creates a container for the eighth question-->
+            <div class="faqs-container">
+                <input type="checkbox" class="faqs-input" id="question8">
+                <label for="question8">Question 8</label>
+                <p>Answer 8</p>
+            </div>
         </div>
 
-</div>
+    </div>
 
 
 
@@ -147,6 +319,7 @@
     <div class="containerFooter">
 
         <div class="footer">
+            <hr />
             <p>Minimalism Society &copy; 2019</p>
         </div>
 

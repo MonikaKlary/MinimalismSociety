@@ -13,141 +13,270 @@
 
     <title>Minimalism Society</title>
 
+    <style>
+
+        /*NavBar-Monika*/
+        body {
+            margin: 0;
+            background: #DEF2F1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .containerNav {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #17252A;
+        }
+
+        header::after {
+           content: '';
+           display: table; /*This allows the header container to be displayed properly*/
+           clear: both;
+        }
+
+        .logo {
+            float: left;
+            height: 80px;
+            width: 180px;
+        }
+
+        nav {
+            float: right;
+        }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            nav li {
+                display: inline-block; /*Makes nav sections go next to each other*/
+                margin-left: 30px;
+                padding-top: 23px;
+                position: relative; /*Allows the nav a elements to remain within the li*/
+            }
+
+            nav ul li a {
+                color: #DEF2F1;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+        .socialMediaIcons {
+            float: right;
+            padding: 23px 0;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #DEF2F1;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms; /*animates the bar above selected page at slower rate*/
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        .containerFooter {
+            padding: 5px;
+            max-width: 100%;
+            color: #17252A;
+            text-align: center;
+        }
+
+       /*NavBar and Footer, end-Monika*/
+
+
+        .jumbotron {
+            background-image: url(jumbotronIMGOpacity75.jpg);
+            text-align: center;
+            height: 750px;
+            border: solid 1px;
+        }
+
+        .homepageTitle {
+            font-weight: bold;
+        }
+
+        .homeText {
+            padding: 60px;
+            font-weight: bold;
+            color: #17252A;
+            font-size: 30px;
+        }
+
+        #email {
+            width: 340px;
+        }
+
+        .form-group {
+            display: inline-block; /*displays the button alongside form*/
+            font-weight: bold;
+        }
+
+        .form-control {
+            border: double 3px;
+            border-color: #DEF2F1;
+            height: 40px;
+            margin-top: 15px;
+        }
+
+        .signUpButton {
+            background-color: #DEF2F1;
+            border-radius: 10px;
+            width: 100px;
+            height: 45px;
+            
+        }
+
+        .containerHome {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .cardDeckContainer {
+            padding: 15px;
+        }
+
+        .card-body {
+            background-color: #17252A;
+            
+        }
+
+        .card-title {
+            color: #DEF2F1;
+        }
+
+        .card-text {
+            color: #DEF2F1;
+        }
+       
+
+    </style>
+
 </head>
 
 <body>
 
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
+    <!--NavBar HTML-Monika-->
+    <header>
+        <div class="containerNav">
 
-    <nav class="navbar navbar-default">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">HomePage</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a> 
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="AboutUs.html">About Us</a>
-
-                    <a class="dropdown-item" href="CurrentMembers.html">Current Members</a>
-
-                    <a class="dropdown-item" href="FAQ.html">FAQ</a>
+            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" /> <!--alt provides alternative if logo can't be displayed-->
 
 
-                </div>
-            </li>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Members</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">What's On</a></li>
+                    <li><a href="">Donation</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Chat Room</a></li>
+                    <li><a href="">Volunteer</a></li>
+                </ul>
+            </nav>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="socialMediaIcons">
+                <a href=""><img src="facebook.png" alt="FB" /></a>
+                <a href=""><img src="instagram.png" alt="IG" /></a>
+                <a href=""><img src="twitter.png" alt="twitter" /></a>
+            </div>
+        </div>
+    </header>
 
-                <div class="dropdown-menu">
+    <!--NavBar HTML-Monika-->
 
-                    <a class="dropdown-item" href="Gallery.html">Gallery</a>
-
-                    <a class="dropdown-item" href="Resources.html">Resources</a>
-
-                    <a class="dropdown-item" href="News.html">News</a>
-
-                    <a class="dropdown-item" href="EventsCalendar.html">What's On(Events calendar)</a>
-
-                    <a class="dropdown-item" href="Donation.html">Donation</a>
-
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="ContactUs.html">Contact Us</a>
-
-                    <a class="dropdown-item" href="ChatRoom.html">Chat room</a>
-
-                    <a class="dropdown-item" href="VolunteerWithUs.html">Volunteer with us</a>
-
-                </div>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-brand">Minimalism Society</a></li>
-        </ul>
-    </nav>
-
-    <!--HomePage Code-Monika-->
 
     <div class="jumbotron">
-        <h1 class="display-4">Minimalism Society</h1>
-        <p class="lead">Join us, and become a part of this exciting society.</p>
-        <hr class="my-4">
-        <p>Want to know more? Sign up to our newsletter!</p>
 
+        <div class="homeText">
+            <h1 class="homepageTitle">Minimalism Society</h1>
+            <p class="leadHomePage">Join us, and become a part of this exciting society.</p>
+            <p>Want to know more? Sign up to our newsletter!</p>
 
-        <form class="form-inline">
             <div class="form-group">
-                <label class="sr-only" for="email">Email address</label>
                 <div class="input-group">
-                    <div class="input-group-addon">@</div>
                     <input type="email" class="form-control" id="email" placeholder="Your email">
+                    <button type="submit" class="signUpButton"></button> <!--need to add onclick function for this and a modal maybe?-->
                 </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign up</button>
-        </form>
 
+            </div>
+        </div>
     </div>
 
-
-
     <div class="containerHome">
-        <div class="row">
-            <h1 class="homepageContainerTitle">The new exciting society</h1>
-            <p class="lead">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div>
+            <h1 class="homepageTitle">The Exciting New Minimalism Society</h1>
+            <p class="lead">Our society aims to create a space for like-minded people to express and share ideas around minimalism, as well as introduce individuals to this amazing lifestyle. We believe that minimalism comes in different shapes and forms, and we as a society encourage people to join us and share what minimalism means to them. We also organise a bunch of activities, talks and events that promote this lifestyle we are so passionate about, and opportunities to volunteer within our society, and outside of university. Join us today, and start your own journey!</p>
 
         </div>
     </div>
 
 
-    <div class="containerHome">
+    <div class="cardDeckContainer">
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="cardImage.jpg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg1.jpeg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
+                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding a multipurpose for singular items. Give it a go creating your own capsule: <br /> https://www.whowhatwear.co.uk/how-to-capsule-wardrobe </p>
+                    <p class="card-text"><small class="text-muted">Last updated 24h ago</small></p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="cardImage2.jpg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg2.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Meet Like-Minded People</h5>
+                    <p class="card-text">Join us today, and meet people who share your passion. Maybe even apply to be part of our comitee! Email us at: <br /> minimalism.society@rgu.ac.uk</p>
+                    <p class="card-text"><small class="text-muted">Last updated Yesterday at 5:30pm</small></p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="cardImage3.jpg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg3.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Get Involved In Our Projects</h5>
+                    <p class="card-text">If you have passion for events planning and eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at Student Union and we will get in touch with you.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 5h agoo</small></p>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="containerFooter">
 
-        <div class="footer">
-            <p>Minimalism Society &copy; 2019</p>
+
+
+    <footer>
+        <div class="containerFooter">
+
+            <div class="footer">
+                <hr />
+                <p>Minimalism Society &copy; 2019</p>
+            </div>
+
         </div>
-
-    </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -155,7 +284,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!--<script type="text/javascript" src="loadNavbar.js"></script>-->
 
 </body>
 </html>

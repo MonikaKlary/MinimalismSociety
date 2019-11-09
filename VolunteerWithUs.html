@@ -13,145 +13,292 @@
 
     <title>Minimalism Society</title>
 
+    <style>
+      
+        /*NavBar-Monika*/
+        body {
+            margin: 0;
+            background: #DEF2F1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .containerNav {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #17252A;
+        }
+
+        header::after {
+           content: '';
+           display: table; /*This allows the header container to be displayed properly*/
+           clear: both;
+        }
+
+        .logo {
+            float: left;
+            height: 80px;
+            width: 180px;
+        }
+
+        nav {
+            float: right;
+        }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            nav li {
+                display: inline-block; /*Makes nav sections go next to each other*/
+                margin-left: 30px;
+                padding-top: 23px;
+                position: relative; /*Allows the nav a elements to remain within the li*/
+            }
+
+            nav ul li a {
+                color: #DEF2F1;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+        .socialMediaIcons {
+            float: right;
+            padding: 23px 0;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #DEF2F1;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms; /*animates the bar above selected page at slower rate*/
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        .containerFooter {
+            padding: 5px;
+            max-width: 100%;
+            color: #17252A;
+            text-align: center;
+        }
+
+       /*NavBar and Footer, end-Monika*/
+
+       /*Volunteer Page CSS*/
+
+       body,html{
+    height:100%;
+    margin:0;
+    background-color:#FEFFFF;
+}
+h1{
+    text-align: center;
+    border-style: double;
+    background-color:#2B7A78;
+}
+
+p{
+    font-style:italic;
+    font-family:'Times New Roman', Times, serif;
+    text-align:auto;
+    font-size:28px;
+}
+.a{
+    font-family: cursive;
+    text-align:auto;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    float:right;
+  }
+  
+  .modal-content {
+    background-color: lightblue;
+    margin: 5px auto; 
+    border: 1px solid #888;
+    width: 30%; 
+    height:40%;
+  }
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  h2{
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+
+
+
+    </style>
+
 </head>
 
 <body>
 
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
-    <!--Navbar for all the pages-Monika-->
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
+    <!--NavBar HTML-Monika-->
+    <header>
+        <div class="containerNav">
 
-    <nav class="navbar navbar-default">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">HomePage</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="AboutUs.html">About Us</a>
-
-                    <a class="dropdown-item" href="CurrentMembers.html">Current Members</a>
-
-                    <a class="dropdown-item" href="FAQ.html">FAQ</a>
+            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" /> <!--alt provides alternative if logo can't be displayed-->
 
 
-                </div>
-            </li>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Members</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">What's On</a></li>
+                    <li><a href="">Donation</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Chat Room</a></li>
+                    <li><a href="">Volunteer</a></li>
+                </ul>
+            </nav>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="socialMediaIcons">
+                <a href=""><img src="facebook.png" alt="FB" /></a>
+                <a href=""><img src="instagram.png" alt="IG" /></a>
+                <a href=""><img src="twitter.png" alt="twitter" /></a>
+            </div>
+        </div>
+    </header>
 
-                <div class="dropdown-menu">
+    <!--NavBar HTML-Monika-->
 
-                    <a class="dropdown-item" href="Gallery.html">Gallery</a>
 
-                    <a class="dropdown-item" href="Resources.html">Resources</a>
-
-                    <a class="dropdown-item" href="News.html">News</a>
-
-                    <a class="dropdown-item" href="EventsCalendar.html">What's On(Events calendar)</a>
-
-                    <a class="dropdown-item" href="Donation.html">Donation</a>
-
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="ContactUs.html">Contact Us</a>
-
-                    <a class="dropdown-item" href="ChatRoom.html">Chat room</a>
-
-                    <a class="dropdown-item" href="VolunteerWithUs.html">Volunteer with us</a>
-
-                </div>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-brand">Minimalism Society</a></li>
-        </ul>
-    </nav>
-
-    <!--Navbar end-->
-    
-        <link rel="stylesheet" href="volunteering.css" type="text/css">
+    <link rel="stylesheet" href="volunteering.css" type="text/css">
     <h1>VOLUNTEER WITH US!</h1>
     <body>
         <div id="bg-test">
         </div>
         <p><b>Have you got time,energy or expertise to share?</b></p>
         <div class="introduction">
-        <p>Volunteers make an enormous contribution to the work of making of a minimalist society, and we very much value all the support you give us. There are many, many ways you can make a difference as we work together to improve the lives of vulnerable people around the world.</p>
+            <p>Volunteers make an enormous contribution to the work of making of a minimalist society, and we very much value all the support you give us. There are many, many ways you can make a difference as we work together to improve the lives of vulnerable people around the world.</p>
 
-         <p>We are currently looking for an enthusiastic and motivated individual with relevant expertise to join our Board of Trustees.
-            
-            Do you have first-hand experience of living as a minimalist?
-            If you are interested, please do get in touch by phoning 020 020 31 020 or emailing at minimalismsociety@ymail.com  Thankyou!</p>
-         </div>
-       
-            <ul class="a">
-                    <p><b>Other volunteer roles include:</b>
-                 <li><b>CHARITY SHOPS-</b>We have our own office in Robert Gordon University in kaim cottage.</li>
-                 <li><b>HOME OFFICE-</b> Do you have expertise in finance, marketing, law, IT or other professional fields, which you feel able to share with us? Would you like to gain experience in these or other relevant areas? Or could you help with general administrative tasks? We are always grateful for volunteer support to work alongside our small, but dedicated, staff team.</li>
-                 <li><b>FUND RAISING FRIENDS-</b>We have some amazing volunteer groups running fun and exciting initiatives to raise money for our work. Whether that’s a coffee morning, a Fun Run, a Bake-Off or a Bonfire Banquet, you’ll have loads of fun and raise money for a very good cause. </li>
-                 <li><b>TRAVELLING-</b>There are a limited number of opportunities for sponsors and donors to visit some of our projects. We like giving people the opportunity to see for themselves how their money is being spent!</li>
-             </ul>
-         </p>
+            <p>
+                We are currently looking for an enthusiastic and motivated individual with relevant expertise to join our Board of Trustees.
 
-         <h2>If you like to volunteer with us. Please fill the form below with your login credentials and be with us!</h2>
+                Do you have first-hand experience of living as a minimalist?
+                If you are interested, please do get in touch by phoning 020 020 31 020 or emailing at minimalismsociety@ymail.com  Thankyou!
+            </p>
+        </div>
 
-         <h1>Volunteering Form</h1>
+        <ul class="a">
+            <p><b>Other volunteer roles include:</b>
+            <li><b>CHARITY SHOPS-</b>We have our own office in Robert Gordon University in kaim cottage.</li>
+            <li><b>HOME OFFICE-</b> Do you have expertise in finance, marketing, law, IT or other professional fields, which you feel able to share with us? Would you like to gain experience in these or other relevant areas? Or could you help with general administrative tasks? We are always grateful for volunteer support to work alongside our small, but dedicated, staff team.</li>
+            <li><b>FUND RAISING FRIENDS-</b>We have some amazing volunteer groups running fun and exciting initiatives to raise money for our work. Whether that’s a coffee morning, a Fun Run, a Bake-Off or a Bonfire Banquet, you’ll have loads of fun and raise money for a very good cause. </li>
+            <li><b>TRAVELLING-</b>There are a limited number of opportunities for sponsors and donors to visit some of our projects. We like giving people the opportunity to see for themselves how their money is being spent!</li>
+        </ul>
+        </p>
 
-         <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+        <h2>If you like to volunteer with us. Please fill the form below with your login credentials and be with us!</h2>
 
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
+        <h1>Volunteering Form</h1>
 
-  <form class="modal-content animate" action="Actionpage.html">
-    <div class="imgcontainer">
-      <img src="avatar.jpg" alt="Avatar" class="avatar">
-    </div>
+        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+            <form class="modal-content animate" action="Actionpage.html">
+                <div class="imgcontainer">
+                    <img src="avatar.jpg" alt="Avatar" class="avatar">
+                </div>
 
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-    <b>CLICK ON LOGIN BUTTON </b>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
 
-<script>
-    var modal = document.getElementById('id01');
-    
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
-        
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+        <b>CLICK ON LOGIN BUTTON </b>
+
+        <script>
+            var modal = document.getElementById('id01');
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
     </body>
 
 
@@ -172,6 +319,7 @@ class="close" title="Close Modal">&times;</span>
     <div class="containerFooter">
 
         <div class="footer">
+            <hr />
             <p>Minimalism Society &copy; 2019</p>
         </div>
 

@@ -13,145 +13,346 @@
 
     <title>Minimalism Society</title>
 
+    <style>
+        
+        /*NavBar-Monika*/
+        body {
+            margin: 0;
+            background: #DEF2F1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .containerNav {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #17252A;
+        }
+
+        header::after {
+           content: '';
+           display: table; /*This allows the header container to be displayed properly*/
+           clear: both;
+        }
+
+        .logo {
+            float: left;
+            height: 80px;
+            width: 180px;
+        }
+
+        nav {
+            float: right;
+        }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            nav li {
+                display: inline-block; /*Makes nav sections go next to each other*/
+                margin-left: 30px;
+                padding-top: 23px;
+                position: relative; /*Allows the nav a elements to remain within the li*/
+            }
+
+            nav ul li a {
+                color: #DEF2F1;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+        .socialMediaIcons {
+            float: right;
+            padding: 23px 0;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #DEF2F1;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms; /*animates the bar above selected page at slower rate*/
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        .containerFooter {
+            padding: 5px;
+            max-width: 100%;
+            color: #17252A;
+            text-align: center;
+        }
+
+       /*NavBar and Footer, end-Monika*/
+
+       
+/*image galleryCss/Siddharth*/
+h1{
+    text-align:center;
+    background-color:#2B7A78;
+    border-style:double;
+}
+
+html,body{
+    background-color:#FEFFFF;
+}
+figure1{
+float: left;
+width: 25%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+clear:both;
+}
+figure2{
+float: left;
+width: 20%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure3{
+float: left;
+width: 20%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure4{
+    float: left;
+    width: 27%;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    border: thin black solid;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+figure5{
+float: left;
+width: 33%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+clear:both;
+}
+figure6{
+    float: left;
+width: 33%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure7{
+    float: left;
+width: 25%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure8{
+    float: left;
+width: 20%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+clear: both;
+}
+figure9{
+    float: left;
+width: 20%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure10{
+    float: left;
+width: 25%;
+text-align: center;
+font-style: italic;
+font-size: smaller;
+text-indent: 0;
+border: thin black solid;
+margin: 0.5em;
+padding: 0.5em;
+}
+figure11{
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    border: thin black solid;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+
+    </style>
+
 </head>
 
 <body>
 
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
-    <!--Navbar for all the pages-Monika-->
-    <!--<div id="navbarFrame"></div> commented out until load script works-->
+    <!--NavBar HTML-Monika-->
+    <header>
+        <div class="containerNav">
 
-    <nav class="navbar navbar-default">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">HomePage</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="AboutUs.html">About Us</a>
-
-                    <a class="dropdown-item" href="CurrentMembers.html">Current Members</a>
-
-                    <a class="dropdown-item" href="FAQ.html">FAQ</a>
+            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" /> <!--alt provides alternative if logo can't be displayed-->
 
 
-                </div>
-            </li>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Members</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">What's On</a></li>
+                    <li><a href="">Donation</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Chat Room</a></li>
+                    <li><a href="">Volunteer</a></li>
+                </ul>
+            </nav>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="socialMediaIcons">
+                <a href=""><img src="facebook.png" alt="FB" /></a>
+                <a href=""><img src="instagram.png" alt="IG" /></a>
+                <a href=""><img src="twitter.png" alt="twitter" /></a>
+            </div>
+        </div>
+    </header>
 
-                <div class="dropdown-menu">
+    <!--NavBar HTML-Monika-->
 
-                    <a class="dropdown-item" href="Gallery.html">Gallery</a>
 
-                    <a class="dropdown-item" href="Resources.html">Resources</a>
 
-                    <a class="dropdown-item" href="News.html">News</a>
-
-                    <a class="dropdown-item" href="EventsCalendar.html">What's On(Events calendar)</a>
-
-                    <a class="dropdown-item" href="Donation.html">Donation</a>
-
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch</a>
-
-                <div class="dropdown-menu">
-
-                    <a class="dropdown-item" href="ContactUs.html">Contact Us</a>
-
-                    <a class="dropdown-item" href="ChatRoom.html">Chat room</a>
-
-                    <a class="dropdown-item" href="VolunteerWithUs.html">Volunteer with us</a>
-
-                </div>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a class="navbar-brand">Minimalism Society</a></li>
-        </ul>
-    </nav>
-
-    <!--Navbar end-->
     <link rel="stylesheet" href="minimalismSocietyCSS.css" type="text/css">
-<head><h1>IMAGE GALLERY </h1></head>
+    <head>
+        <h1>IMAGE GALLERY </h1>
+    </head>
 
-<body>
-    <figure1>
-    <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)"  src="cycle.jpg" alt="">
-    <figcaption><b>Figure1.Holding on memories doesnot mean holding on to possessions.</b></figcaption>
-    </figure1>
+    <body>
+        <figure1>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="cycle.jpg" alt="">
+            <figcaption><b>Figure1.Holding on memories doesnot mean holding on to possessions.</b></figcaption>
+        </figure1>
 
-    <figure2>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="room.jpg" alt="">
-        <fifcaption><b>Figure2.Simplicity is the ultimate sophistication.</b></fifcaption>
-    </figure2>
+        <figure2>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="room.jpg" alt="">
+            <fifcaption><b>Figure2.Simplicity is the ultimate sophistication.</b></fifcaption>
+        </figure2>
 
-    <figure3>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="travelling.jpg" alt="">
-        <figcaption><b>Figure3.It is always the simple that produces the marvelous.</b></figcaption>
-    </figure3>
+        <figure3>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="travelling.jpg" alt="">
+            <figcaption><b>Figure3.It is always the simple that produces the marvelous.</b></figcaption>
+        </figure3>
 
-    <figure4>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="arrangement.jpg" alt="">
-        <figcaption><b>Figure4.All you need is less.</b></figcaption>
-    </figure4>
+        <figure4>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="arrangement.jpg" alt="">
+            <figcaption><b>Figure4.All you need is less.</b></figcaption>
+        </figure4>
 
-    <figure5>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="bedroom.jpg" alt="">
-        <figcaption><b>Figure5.The more stuff you own,the more your stuff owns you.</b></figcaption>
-    </figure5>
+        <figure5>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="bedroom.jpg" alt="">
+            <figcaption><b>Figure5.The more stuff you own,the more your stuff owns you.</b></figcaption>
+        </figure5>
 
-    <figure6>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="kitchen.jpg" alt="">
-        <figcaption><b>Figure6.Quality not quantity.</b></figcaption>
-    </figure6>
+        <figure6>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="kitchen.jpg" alt="">
+            <figcaption><b>Figure6.Quality not quantity.</b></figcaption>
+        </figure6>
 
-    <figure7>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="bagpack.jpg" alt="">
-        <figcaption><b>Figure7.Gears for hiking.</b></figcaption>
-    </figure7>
+        <figure7>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="bagpack.jpg" alt="">
+            <figcaption><b>Figure7.Gears for hiking.</b></figcaption>
+        </figure7>
 
-    <figure8>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="platter.jpg" alt="">
-        <figcaption><b>Figure8.Best food for healthy life.</b></figcaption>
-    </figure8>
+        <figure8>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="platter.jpg" alt="">
+            <figcaption><b>Figure8.Best food for healthy life.</b></figcaption>
+        </figure8>
 
-    <figure9>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="packaging.jpg" alt="">
-        <figcapton><b>Figure9.Best tips to packaging as a minimalist.</b></figcapton>
-    </figure9>
+        <figure9>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="packaging.jpg" alt="">
+            <figcapton><b>Figure9.Best tips to packaging as a minimalist.</b></figcapton>
+        </figure9>
 
-    <figure10>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="box.jpg" alt="">
-        <figcaption><b>Figure10.Minimalism is not the lack of something. It is simply the perfect amount of something.</b></figcaption>
-    </figure10>
+        <figure10>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="box.jpg" alt="">
+            <figcaption><b>Figure10.Minimalism is not the lack of something. It is simply the perfect amount of something.</b></figcaption>
+        </figure10>
 
-    <figure11>
-        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" src="books.jpg" alt="">
-        <figcaption><b>Figure11.Book case a minimalist should have</b></figcaption>
-    </figure11>
+        <figure11>
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="books.jpg" alt="">
+            <figcaption><b>Figure11.Book case a minimalist should have</b></figcaption>
+        </figure11>
 
-    <script>
-        function bigImg(x) {
-  x.style.height = "350px";
-  x.style.width = "330px";
-}
+        <script>
+            function bigImg(x) {
+                x.style.height = "350px";
+                x.style.width = "330px";
+            }
 
-function normalImg(x) {
-  x.style.height = "300px";
-  x.style.width = "300px";
-}
-    </script>
-</body>
+            function normalImg(x) {
+                x.style.height = "300px";
+                x.style.width = "300px";
+            }
+        </script>
+    </body>
 
 
 
@@ -171,6 +372,7 @@ function normalImg(x) {
     <div class="containerFooter">
 
         <div class="footer">
+            <hr />
             <p>Minimalism Society &copy; 2019</p>
         </div>
 
