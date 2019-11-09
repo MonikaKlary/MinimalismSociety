@@ -12,8 +12,8 @@
 
     <title>Minimalism Society</title>
 
-    <style>
-            <style>
+
+        <style>
 
         /*NavBar-Monika*/
         body {
@@ -97,19 +97,93 @@
             max-width: 100%;
             color: #17252A;
             text-align: center;
+            clear: both;
         }
 
        /*NavBar and Footer, end-Monika*/
 
        
 
-/*ContactPageCSS - Paige*/
-.contact-container {
-    text-align: center;
-    background-color: #DEF2F1;
-}
+        /*ContactPageCSS - Paige*/
+        #contactUsHeadContainer {
+            margin-top: 0;
+            padding: 30px;
+            border: 2px solid;
+            text-align: center;
+        }
 
-/*ContactPageEnds*/
+        .contactUsText {
+            color: #17252A;
+            font-weight: bold;
+           letter-spacing: 3px;
+        }
+
+        .logoHeader {
+            height: 300px;
+            width: 600px;
+        }
+
+        #contactUsContainer {
+           padding: 50px 500px 0 500px;
+        }
+
+        #contactUsContainer:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .labelStyle {
+            display: block;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        form {
+            margin:0 auto;
+            width:459px;
+            float:left;
+        }
+
+        input, textarea {
+	        width:439px;
+	        height:27px;
+	        background:#efefef;
+	        border:1px solid #dedede;
+	        padding:10px;
+	        margin-top:3px;
+	        font-size:0.9em;
+	        color:#3a3a3a;
+         }
+
+            #submit {
+            width:127px;
+            height:38px;
+            border-radius: 5%;
+            color: #DEF2F1;
+            font-weight: bold;
+            background-color: #17252A ;
+            margin-top:20px;
+            cursor:pointer;
+        }
+
+	        #submit:hover {
+	            opacity:.9;
+	        }
+
+            textarea {
+	            height:213px;
+	            background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+            }
+
+            .contactContent {
+                float: right;
+                padding-top: 120px;
+            }
+
+     
+
+        /*ContactPageEnds*/
 
 
 
@@ -156,16 +230,38 @@
     <!--NavBar HTML-Monika-->
 
 
-
-
-    <div id="resourcesHeadContainer">
-        <h1 class="resourcesText">Contact Us</h1>
-        <p class="resourcesText">Please get in touch!</p>
-
+    <div id="contactUsHeadContainer">
+        <img src="LogoHeader.png" class="logoHeader" />
+        <h1 class="contactUsText">Contact Us</h1>
+        <p class="contactUsText">Get In Touch With The Society</p>
     </div>
 
 
+    <div id="contactUsContainer">
+        <form>
 
+            <label class="labelStyle">Name</label>
+            <input name="name" placeholder="Type Here" />
+
+            <label class="labelStyle">Email</label>
+            <input name="email" type="email" placeholder="Type Here" />
+
+            <label class="labelStyle">Message</label>
+            <textarea name="message" placeholder="Type Here"></textarea>
+
+            <input id="submit" name="submit" type="submit" value="submit" />
+
+        </form>
+
+  
+        <div class="contactContent">
+            <h2>Other Ways to Connect:</h2>
+            <p>Email:</p>
+            <p>Tel:</p>
+            <p>Where you can find us:</p>
+            <p>Social Media:</p>
+        </div>
+    </div>
 
 
 
