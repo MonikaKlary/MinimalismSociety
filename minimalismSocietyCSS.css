@@ -313,6 +313,7 @@ q {
 /*Sets the postion of the donation container*/
 .donation-container {
     width: 50%;
+    height: 100%
     float: right;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
