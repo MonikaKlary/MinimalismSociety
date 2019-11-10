@@ -127,18 +127,19 @@
             font-weight: bold;
         }
 
-        .form-control {
-            border: double 3px;
+        .form-control, #signUpButton {
+            display: inline-block;
+            border: double 2px;
             border-color: #DEF2F1;
-            height: 40px;
-            margin-top: 15px;
         }
 
-        .signUpButton {
+        #signUpButton {
+            color: #17252A;
             background-color: #DEF2F1;
-            border-radius: 10px;
-            width: 100px;
-            height: 45px;
+            border-radius: 10px; 
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
             
         }
 
@@ -164,6 +165,46 @@
             color: #DEF2F1;
         }
        
+        a {
+            color: #3AAFA9;
+        }
+
+        /* The Modal (background) */
+        .modal {
+          display: none;                                  /* Hidden by default, only appears when sign up button clicked */
+          position: fixed;                               /* Stays in fixed place */
+          z-index: 1;                                   /* Displays on top of other elements */
+          left: 0;
+          top: 0;
+          width: 100%;                                /* Full width */
+          height: 100%;                              /* Full height */
+          overflow: auto;                           /* Allows scroll */
+          background-color: rgba(0,0,0,0.4);       /* keeps background visible once modal is displayed */
+ 
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #DEF2F1;
+          margin: 15% auto; 
+          padding: 20px;
+          border: 3px double;
+          width: 80%; 
+        }
+
+        /* The Close Button */
+        .close {
+          color: #17252A;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
 
     </style>
 
@@ -196,9 +237,9 @@
             </nav>
 
             <div class="socialMediaIcons">
-                <a href=""><img src="facebook.png" alt="FB" /></a>
-                <a href=""><img src="instagram.png" alt="IG" /></a>
-                <a href=""><img src="twitter.png" alt="twitter" /></a>
+                <a href="https://en-gb.facebook.com/"><img src="facebook.png" alt="FB" /></a>
+                <a href="  https://www.instagram.com/"><img src="instagram.png" alt="IG" /></a>
+                <a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="twitter" /></a>
             </div>
         </div>
     </header>
@@ -206,7 +247,7 @@
     <!--NavBar HTML-Monika-->
 
 
-    <div class="jumbotron">
+    <div class="jumbotron"> <!--Element to catch user's attention-->
 
         <div class="homeText">
             <h1 class="homepageTitle">Minimalism Society</h1>
@@ -216,17 +257,28 @@
             <div class="form-group">
                 <div class="input-group">
                     <input type="email" class="form-control" id="email" placeholder="Your email">
-                    <button type="submit" class="signUpButton"></button> <!--need to add onclick function for this and a modal maybe?-->
+                    <button type="submit" id="signUpButton">Sign Up</button> 
                 </div>
 
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span> <!--Close modal button-->
+                        <p>Thank you for signing up for our newsletter! Check your inbox regularly to keep up to date with all fun activities we have in store for you! <br /> Hope to see you soon at one of our events! <br /> -Minimalism Society</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 
+
+
     <div class="containerHome">
         <div>
             <h1 class="homepageTitle">The Exciting New Minimalism Society</h1>
-            <p class="lead">Our society aims to create a space for like-minded people to express and share ideas around minimalism, as well as introduce individuals to this amazing lifestyle. We believe that minimalism comes in different shapes and forms, and we as a society encourage people to join us and share what minimalism means to them. We also organise a bunch of activities, talks and events that promote this lifestyle we are so passionate about, and opportunities to volunteer within our society, and outside of university. Join us today, and start your own journey!</p>
+            <p class="lead">Our society aims to create a space for like-minded people to express and share ideas around minimalism, as well as introduce individuals to this amazing lifestyle. We believe that minimalism comes in all different shapes and forms, and we as a society encourage people to join us and share what minimalism means to them. We organise a bunch of activities, talks and events that promote the lifestyle we are so passionate about, and provide opportunities to volunteer within our society, and outside of university. Join us today, and start your own journey!</p>
 
         </div>
     </div>
@@ -235,31 +287,63 @@
     <div class="cardDeckContainer">
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="cardimg1.jpeg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg1.jpeg" alt="can't display image"> <!--Provides alternative if image not supported in browser of choice-->
                 <div class="card-body">
                     <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
-                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding a multipurpose for singular items. Give it a go creating your own capsule: <br /> https://www.whowhatwear.co.uk/how-to-capsule-wardrobe </p>
+                    <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding multiple purposes for singular items. Give it a go, create your own capsule wardrobe: <br /> <a href="https://www.whowhatwear.co.uk/how-to-capsule-wardrobe">How To Capsule Wardrobe</a></p>
                     <p class="card-text"><small class="text-muted">Last updated 24h ago</small></p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="cardimg2.jpg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg2.jpg" alt="can't display image">
                 <div class="card-body">
                     <h5 class="card-title">Meet Like-Minded People</h5>
-                    <p class="card-text">Join us today, and meet people who share your passion. Maybe even apply to be part of our comitee! Email us at: <br /> minimalism.society@rgu.ac.uk</p>
+                    <p class="card-text">Join us today, and meet people who share your passion. Apply to be part of our comitee! <br /> Email us at: <br /> minimalism.society@rgu.ac.uk</p>
                     <p class="card-text"><small class="text-muted">Last updated Yesterday at 5:30pm</small></p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="cardimg3.jpg" alt="Card image cap">
+                <img class="card-img-top" src="cardimg3.jpg" alt="can't display image">
                 <div class="card-body">
                     <h5 class="card-title">Get Involved In Our Projects</h5>
-                    <p class="card-text">If you have passion for events planning and eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at Student Union and we will get in touch with you.</p>
+                    <p class="card-text">If you have a passion for events planning and an eye for detail, why not join our Projects Team and help us organise upcoming events! <br /> Drop off your CV at the Student Union and we will get in touch with you.</p>
                     <p class="card-text"><small class="text-muted">Last updated 5h agoo</small></p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+       document.getElementById("signUpButton");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // modal opens when user clicks the button
+        signUpButton.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When user clicks outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+
+
+
+    </script>
 
 
 
