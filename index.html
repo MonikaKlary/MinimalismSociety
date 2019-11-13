@@ -4,17 +4,18 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Makes the website adaptable to different screen size-->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Minimalism Society</title>
+    <title>Minimalism Society HomePage</title>
 
     <style>
 
         /*NavBar-Monika*/
-        body {
+        body {                       /*I set the base look for the whole background colour as well as set the text style for all pages*/
             margin: 0;
             background: #DEF2F1;
             font-family: Arial, Helvetica, sans-serif;
@@ -23,7 +24,7 @@
 
         .containerNav {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto;     /*Centers the navbar contents in the middle of the page*/
         }
 
         header {
@@ -36,7 +37,7 @@
            clear: both;
         }
 
-        .logo {
+        .logo {            /*Edited logo size to fit the navbar*/                                
             float: left;
             height: 80px;
             width: 180px;
@@ -46,10 +47,10 @@
             float: right;
         }
 
-            nav ul {
+            nav ul {               /*Created the list of pages*/
                 margin: 0;
                 padding: 0;
-                list-style: none;
+                list-style: none;   /*removed the list style to make the navbar look more professional*/
             }
 
             nav li {
@@ -62,7 +63,7 @@
             nav ul li a {
                 color: #DEF2F1;
                 text-decoration: none;
-                text-transform: uppercase;
+                text-transform: uppercase;    /*Makes all text consistent as transformed into uppercase*/
                 font-size: 14px;
             }
 
@@ -75,7 +76,7 @@
             color: #000000;
         }
 
-        nav a::before {
+        nav a::before {    /*pseudo-class use here allowed me to create the animation above pages text*/
             content: '';
             display: block;
             height: 5px;
@@ -95,20 +96,23 @@
             max-width: 100%;
             color: #17252A;
             text-align: center;
+            clear: both;        /*keeps footer in place out of the way of other elements float*/
         }
 
        /*NavBar and Footer, end-Monika*/
 
 
+       /*Homepage Monika*/
+
         .jumbotron {
-            background-image: url(jumbotronIMGOpacity75.jpg);
+            background-image: url(jumbotronIMGOpacity75.jpg);  
             text-align: center;
             height: 750px;
             border: solid 1px;
         }
 
         .homepageTitle {
-            font-weight: bold;
+            font-weight: bold;  
         }
 
         .homeText {
@@ -123,7 +127,7 @@
         }
 
         .form-group {
-            display: inline-block; /*displays the button alongside form*/
+            display: inline-block;          /*keeps the email window from stretching across page*/
             font-weight: bold;
         }
 
@@ -133,22 +137,22 @@
             border-color: #DEF2F1;
         }
 
-        #signUpButton {
+        #signUpButton {                    /*Personalised the button to match webpage style*/
             color: #17252A;
             background-color: #DEF2F1;
             border-radius: 10px; 
             text-align: center;
-            display: inline-block;
+            display: inline-block;        /*Displays the button alongside email window*/
             font-size: 20px;
             
         }
 
-        .containerHome {
+        .containerHome {                  /*contains elements on the homepage, allows easier editing*/
             padding: 35px;
             text-align: center;
         }
 
-        .cardDeckContainer {
+        .cardDeckContainer {          /*contains the deck of cards so I can edit the width and how it looks on the whole of the page*/
             padding: 15px;
         }
 
@@ -166,24 +170,24 @@
         }
        
         a {
-            color: #3AAFA9;
+            color: #3AAFA9;               /*sets links colour to a more distinctive one*/
         }
 
-        /* The Modal (background) */
+       
         .modal {
           display: none;                                  /* Hidden by default, only appears when sign up button clicked */
-          position: fixed;                               /* Stays in fixed place */
-          z-index: 1;                                   /* Displays on top of other elements */
+          position: fixed;                                /* Stays in fixed place */
+          z-index: 1;                                     /* Displays on top of other elements */
           left: 0;
           top: 0;
-          width: 100%;                                /* Full width */
-          height: 100%;                              /* Full height */
-          overflow: auto;                           /* Allows scroll */
-          background-color: rgba(0,0,0,0.4);       /* keeps background visible once modal is displayed */
+          width: 100%;                                  /* Full width */
+          height: 100%;                                /* Full height */
+          overflow: auto;                              /* Allows scroll */
+          background-color: rgba(0,0,0,0.4);           /* keeps background visible once modal is displayed */
  
         }
 
-        /* Modal Content/Box */
+                                                        /* Modal Content/Box */
         .modal-content {
           background-color: #DEF2F1;
           margin: 15% auto; 
@@ -192,7 +196,7 @@
           width: 80%; 
         }
 
-        /* The Close Button */
+                                                        /* The Close Button */
         .close {
           color: #17252A;
           float: right;
@@ -213,15 +217,16 @@
 <body>
 
     <!--NavBar HTML-Monika-->
+
     <header>
         <div class="containerNav">
 
-            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" /> <!--alt provides alternative if logo can't be displayed-->
+            <img src="MinimalismSocietyLogo.png" alt="logo" class="logo" />    <!--alt provides alternative if logo can't be displayed-->
 
 
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                <ul> 
+                    <li><a href="index.html">Home</a></li>                     <!--All pages are linked up to each other in this section-->
                     <li><a href="AboutUs.html">About</a></li>
                     <li><a href="CurrentMembers.html">Members</a></li>
                     <li><a href="FAQ.html">FAQ</a></li>
@@ -237,7 +242,7 @@
             </nav>
 
             <div class="socialMediaIcons">
-                <a href="https://en-gb.facebook.com/"><img src="facebook.png" alt="FB" /></a>
+                <a href="https://en-gb.facebook.com/"><img src="facebook.png" alt="FB" /></a>        <!--Inputting links here made the social media icons interactive-->
                 <a href="  https://www.instagram.com/"><img src="instagram.png" alt="IG" /></a>
                 <a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="twitter" /></a>
             </div>
@@ -247,20 +252,20 @@
     <!--NavBar HTML-Monika-->
 
 
-    <div class="jumbotron"> <!--Element to catch user's attention-->
+    <div class="jumbotron">         <!--Element to catch user's attention-->
 
         <div class="homeText">
             <h1 class="homepageTitle">Minimalism Society</h1>
-            <p class="leadHomePage">Join us, and become a part of this exciting society.</p>
+            <p class="leadHomePage">Join us, and become a part of this exciting society.</p>   <!--Drawing attention/encouragin message to engage user-->
             <p>Want to know more? Sign up to our newsletter!</p>
 
-            <div class="form-group">
+            <div class="form-group">                                                            <!--Each element is contained within its own div to make structuring the website easier, and place elements as a whole rather that allow them to flow freely-->
                 <div class="input-group">
                     <input type="email" class="form-control" id="email" placeholder="Your email">
                     <button type="submit" id="signUpButton">Sign Up</button> 
                 </div>
 
-                <div id="myModal" class="modal">
+                <div id="myModal" class="modal">    <!--Makes Sign up button interactive, shows acknowledgement message-->
 
                     <!-- Modal content -->
                     <div class="modal-content">
@@ -291,7 +296,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Try Minimalism: Discover Capsule Wardrobe</h5>
                     <p class="card-text">Becoming minimalist often means re-discovering your wardrobe and finding multiple purposes for singular items. Give it a go, create your own capsule wardrobe: <br /> <a href="https://www.whowhatwear.co.uk/how-to-capsule-wardrobe">How To Capsule Wardrobe</a></p>
-                    <p class="card-text"><small class="text-muted">Last updated 24h ago</small></p>
+                    <p class="card-text"><small class="text-muted">Last updated 24h ago</small></p>   <!--Activity times make user see how much we update our website, helps with drawing students in to the society-->
                 </div>
             </div>
             <div class="card">
@@ -354,7 +359,7 @@
 
             <div class="footer">
                 <hr />
-                <p>Minimalism Society &copy; 2019</p>
+                <p>Minimalism Society &copy; 2019</p> <!--Signature footer-->
             </div>
 
         </div>
