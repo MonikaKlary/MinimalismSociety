@@ -9,8 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="minimalismSocietyCSS.css" />
+
     <title>Minimalism Society</title>
 
     <style>
@@ -120,118 +120,6 @@
 
 
        /*NavBar and Footer, end-Monika*/
-        
-        
-        html, body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-body {
-  font-family: Sans-Serif;
-  color: #000;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.gallery {
-  width: 500px;
-  height: 300px;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
-  
-  & div.left, div.right {
-    width: 30px;
-    height: 30px;
-    margin: 0px;
-    padding: 0px;
-    background: #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    
-    &:hover {
-      background: #333;
-    }
-    
-    &.x {
-      background: #444;
-      cursor: default;
-    }
-  }
-  
-  & div.left {
-    left: -50px;
-    
-    &:after {
-      content: '';
-      width: 0px;
-      height: 0px;
-      margin: 0px;
-      padding: 0px;
-      position: absolute;
-      top: 50%;
-      left: 25%;
-      transform: translate(-50%, -50%);
-      border-left: solid 10px transparent;
-      border-right: solid 10px white;
-      border-top: solid 10px transparent;
-      border-bottom: solid 10px transparent;
-    }
-  }
-  & div.right {
-    right: -50px;
-    
-    &:after {
-      content: '';
-      width: 0px;
-      height: 0px;
-      margin: 0px;
-      padding: 0px;
-      position: absolute;
-      top: 50%;
-      left: 0%;
-      transform: translate(50%, -50%);
-      border-left: solid 10px white;
-      border-right: solid 10px transparent;
-      border-top: solid 10px transparent;
-      border-bottom: solid 10px transparent;
-    }
-  }
-}
-
-div.slider {
-  width: 500px;
-  height: 300px;
-  margin: 0px;
-  padding: 0px;
-  border: solid 1px #888;
-  position: relative;
-  overflow: hidden;
-  
-  & div.images {
-    width: 10000px;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    background-image: linear-gradient(0deg, red 0%, blue 100%);
-    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
-    
-    & img {
-      width: 500px;
-      height: 100%;
-      margin: 0px;
-      padding: 0px;
-      float: left;
-    }
-  }
-}
 
         
 
@@ -363,21 +251,6 @@ div.slider {
 
     <!--NavBar HTML-Monika-->
 
-    
-    <div class="gallery">
-<div class="slider">
-  <div class="images">
-    
-    <img src="http://www.wallpapertycoon.com/wp-content/uploads/2015/12/landscape_field_landscape_nature_wallpaper.jpg" />
-    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAOWAAAAJDMyYzVlMDI1LTM2Y2MtNGQ3Mi1iNzBiLTE3NmYwMzZmMzNlZg.jpg" />
-    <img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/714/overrides/canada-view-niblet_71483_600x450.jpg" />
-    <img src="http://xdesktopwallpapers.com/wp-content/uploads/2012/01/Sunset%20Cityscape%20Scene.jpg" />
-    
-  </div>
-</div>
-<div class="left x"></div>
-<div class="right"></div>
-</div>
 
 
 
@@ -445,54 +318,12 @@ div.slider {
         <b>CLICK ON LOGIN BUTTON </b>
             </div>
         <script>
-            
-            $(function() {
-  
-  var $left = $('.left'),
-      $right = $('.right'),
-      $slider = $('.images'),
-      $count = $('.images img').length,
-      count = 1;
-  
-  $right.on('click', function() {
-    if (count == $count) {
-      return false;
-    } else {
-      $slider.animate({
-        marginLeft: '-=500px'
-      }, 'slow');
-      count++;
-      if (count != 1 && count < $count) {
-        $left.removeClass('x');
-        $right.removeClass('x');
-      } else if (count == $count) {
-        $right.addClass('x');
-      }
-    }
-  });
-  
-  $left.on('click', function() {
-    if (count != 1) {
-      $slider.animate({
-        marginLeft: '+=500px'
-      }, 'slow');
-      count--;
-      if (count != 1 && count < $count) {
-        $left.removeClass('x');
-        $right.removeClass('x');
-      } else if (count == 1) {
-        $left.addClass('x');
-      }
-    }
-  });
-  
-});
-            //var modal = document.getElementById('id01');
-            //window.onclick = function (event) {
-                //if (event.target == modal) {
-                   // modal.style.display = "none";
-               // }
-          //  }
+            var modal = document.getElementById('id01');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         </script>
 
     </body>
