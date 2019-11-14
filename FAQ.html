@@ -97,8 +97,6 @@
             text-align: center;
         }
 
-       /*NavBar and Footer, end-Monika*/
-
          #FAQHeadContainer {
             margin-top: 0;
             padding: 30px;
@@ -118,110 +116,122 @@
             width: 600px;
         }
 
+       /*NavBar and Footer, end-Monika*/
+        
        
-/*FAQ - Calum*/
-/*Stores all the different containers for the page*/
-/*Stores all the different containers for the page*/
-.faq{
-    /*sets colours and size for the container*/
-    background-color: #FEFFFF;
-}
 
-.faqsmain-container{
-    border: double black thick;
-    background-color: #DEF2F1;
-}
+        /*FAQ - Calum*/
 
-/*Centers the answers*/
-.faqs-container p{
-    text-align: center;
-}
 
-/*Adds some spacing between the questions*/
-.faqs-container{
-    margin: 40px 0;
-    position: relative;
-}
+        /*Stores all the different containers for the page*/
+        /*Stores all the different containers for the page*/
 
-/*Allows the answers to be hidden*/
-.faqs-container p{
-    display: none;
-}   
+  
+        /*Added Introduction Section and edited colours overall-Monika*/
+        .introductionContainer {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            margin: 20px 20px 0 20px;
+        }
 
-/*Allows the checkboxes to be hidden */
-.faqs-container input{
-    position: absolute;
-    z-index: 3;
-    cursor: pointer;
-    opacity: 0;         
-    margin: 0;          
-    width: 100%;
-    height: 10px;
-}
 
-/*Show only the clipped intro*/
-.faqs-container label{
-    text-align: center;
-    display: block; 
-    color: #17252A; /*sets a color for the questions*/
-    font-size: .85em;
-    transition: all .15s ease-out;
-    /*prevents the code wrapping*/
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;                       
-} 
+        .faqsmain-container{
+            border: black solid 2px;
+            background-color: #DEF2F1;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
 
-/*If the question is clicked on it will show the answer*/
-.faqs-container input[type=checkbox]:checked~p{
-    display: block;
-    color: #17252A; /*sets a color for the answers*/
-    font-size: 20px;
-    /*prevents the code wrapping*/
-    text-overflow: clip; 
-    white-space: normal;
-    overflow: visible;  
-    background-color: #DEF2F1;
-    width: relative;
-    height: 10%;
-}
+        /*Centers the answers*/
+        .faqs-container p{
+            text-align: center;
+        }
 
-/*setting up the label inside the container*/
-.faqs-container label{
-    font-size: 25px;
-    background-color: #2B7A78;
-    display: block!important;
-    position: relative;
-    height: 46px;
-    padding: 7px 10px;
-    font-weight: bold;
-    border: 1px solid black;
-    border-left: 3px solid black;
-    transition: all .15s ease-out;          
-}
+        /*Adds some spacing between the questions*/
+        .faqs-container{
+            margin: 40px 0;
+            position: relative;
+        }
 
-/*the labels arrow, should be in the normal mode */
-.faqs-container label::before{
-    /*setting up the way the arrow looks in normal mode on the right*/
-    content: '';
-    position: absolute;
-    right: 4px;
-    top: 50%;
-    margin-top: -5px;
-    border: 12px solid transparent;
-    border-left-color: inherit; 
-}
+        /*Allows the answers to be hidden*/
+        .faqs-container p{
+            display: none;
+        }   
 
-/*Update the right arrow*/
-.faqs-container input[type=checkbox]:checked~label::before{
-    /*setting up the way the arrow looks after it has been clicked on the right*/
-    border: 12px solid transparent;
-    border-top-color: inherit;
-    margin-top: -5px;
-    right: 10px;    
-}
+        /*Allows the checkboxes to be hidden */
+        .faqs-container input{
+            position: absolute;
+            z-index: 3;
+            cursor: pointer;
+            opacity: 0;         
+            margin: 0;          
+            width: 100%;
+            height: 10px;
+        }
 
-    /*FAQ End*/
+        /*Show only the clipped intro*/
+        .faqs-container label{
+            text-align: center;
+            display: block; 
+            color: #DEF2F1; /*sets a color for the questions*/
+            font-size: .85em;
+            transition: all .15s ease-out;
+            /*prevents the code wrapping*/
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;                       
+        } 
+
+        /*If the question is clicked on it will show the answer*/
+        .faqs-container input[type=checkbox]:checked~p{
+            display: block;
+            font-size: 20px;
+            /*prevents the code wrapping*/
+            text-overflow: clip; 
+            white-space: normal;
+            overflow: visible;  
+            background-color: #;
+            height: 10%;
+        }
+
+        /*setting up the label inside the container*/
+        .faqs-container label{
+            font-size: 20px;
+            background-color: #17252A;
+            display: block!important;
+            position: relative;
+            height: 46px;
+            padding: 7px 10px;
+            font-weight: bold;
+            border: 1px solid black;
+            border-left: 3px solid black;
+            transition: all .15s ease-out;          
+        }
+
+        /*the labels arrow, should be in the normal mode */
+        .faqs-container label::before{
+            /*setting up the way the arrow looks in normal mode on the right*/
+            content: '';
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            margin-top: -5px;
+            border: 12px solid transparent;
+            border-left-color: inherit; 
+        }
+
+        /*Update the right arrow*/
+        .faqs-container input[type=checkbox]:checked~label::before{
+            /*setting up the way the arrow looks after it has been clicked on the right*/
+            border: 12px solid transparent;
+            border-top-color: inherit;
+            margin-top: -5px;
+            right: 10px;    
+        }
+
+            /*FAQ End*/
 
 
     </style>
@@ -262,67 +272,73 @@
         </div>
     </header>
 
-    <!--NavBar HTML-Monika-->
 
     <div id="FAQHeadContainer">
         <img src="LogoHeader.png" class="logoHeader" />
         <h1 class="FAQText">FAQ's</h1>
-        <p class="aboutUsText">How did Minimalism Society start</p>
+        <p class="FAQText">Frequently asked questions</p>
     </div>
 
+    <!--NavBar HTML-Monika-->
 
 
 
     <!--creates the container for the page-->
     <div class="faq">
-        <div class="faqsmain-container">
+
+        <div class="introductionContainer">
+        <h1>Here you can find out more about joining the society and behind the scenes!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
+        </div>
+
+            <div class="faqsmain-container">
             <!--creates a container for the first question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question1">
-                <label for="question1">Question 1</label>
-                <p>Answer 1</p>
+                <label for="question1">How do I join the Minimalism Society?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the second question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question2">
-                <label for="question2">Question 2</label>
-                <p>Answer 2</p>
+                <label for="question2">Where does the money from my membership go?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the third question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question3">
-                <label for="question3">Question 3</label>
-                <p>Answer 3</p>
+                <label for="question3">Is it a big commitment to join the society?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the forth question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question4">
-                <label for="question4">Question 4</label>
-                <p>Answer 4</p>
+                <label for="question4">When and Where do you meet?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the fifth question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question5">
-                <label for="question5">Question 5</label>
-                <p>Answer 5</p>
+                <label for="question5">How can I become a member of the comitee?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the sixth question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question6">
-                <label for="question6">Question 6</label>
-                <p>Answer 6</p>
+                <label for="question6">Do you organise trips as a society?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.6</p>
             </div>
             <!--creates a container for the seventh question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question7">
-                <label for="question7">Question 7</label>
-                <p>Answer 7</p>
+                <label for="question7">Can I come along to your sessions if I'm from the other University?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--creates a container for the eighth question-->
             <div class="faqs-container">
                 <input type="checkbox" class="faqs-input" id="question8">
-                <label for="question8">Question 8</label>
-                <p>Answer 8</p>
+                <label for="question8">Do you have a society annual ball?</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
 
