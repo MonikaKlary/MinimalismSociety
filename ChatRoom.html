@@ -35,22 +35,25 @@
             height: 19.5ch;
         }
         .discussionTopic {
-            width: 70%;
+            width: 68.3%;
         }
         .forumThreads {
             background-color: rgb(174, 184, 183);
-            border: 0px;
+            border: 3px;
             padding: 0.5%;
             margin-top:2%;
             margin-left: 10%;
             margin-right: 10%;
             padding-bottom: 5%;
+            border-color: #17252A;
         }
         .card {
         background-color: white;
         padding: 20px;
         margin-top: 20px;
         text-align: left;
+        border-width: 1px;
+        border-color: #17252A;
         }
         .leftPost {
         float: left;
@@ -58,7 +61,16 @@
         margin-left: 10%;
         }
 
-
+        #postForumButton {                    /*Personalised the button to match webpage style*/
+            color: #17252A;
+            background-color: #DEF2F1;
+            border-radius: 10px; 
+            text-align: center;
+            display: inline-block;        /*Displays the button alongside email window*/
+            font-size: 18px;
+            
+        }
+        
         /*NavBar-Monika*/
         body {
             margin: 0;
@@ -223,10 +235,11 @@
         <div class="leftSide">
             <br>
             <!-- Placeholder Display Forum -->
-            <form>
+            <form id="discussionInfo">
                 <input type="text" placeholder="Discussion Subject" class="discussionTopic">
-                <button type="submit">Add new discussion</button><br><br>
-                <textarea placeholder="Discussion Details" class="discussionEntry"></textarea>
+                <button type="button" id="postForumButton" onclick="showText()">Add new discussion</button><br><br>
+                <textarea placeholder="Discussion Details" class="discussionEntry"></textarea><br>
+                <p id="hiddenText" style="opacity: 0%;">Thank you for posting to the Forums!</p><br>
             </form>
             <!-- Latest Discussions Section -->
             <h1 class="chatRoomHeadContainer">Latest Discussions</h1>
@@ -287,12 +300,33 @@
 
     </div>
 
+    <script type="text/javascript">
+        var i = 0;
+        var elOpacity = 100;
+        function showText() {
+            document.getElementById("hiddenText").style.opacity = "100%";
+            i = 0;
+            elOpacity = 100;
+            setTimeout(hideText, 1000);
+        }
+        function hideText() {
+            if (i !== 101) {
+                document.getElementById("hiddenText").style.opacity = elOpacity + "%";
+                i++;
+                elOpacity -= 1
+                console.log(elOpacity);
+                setTimeout(hideText, 10);
+            }
+
+        }
+    </script>
+
     <!--Footer end-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    
     <!--<script type="text/javascript" src="loadNavbar.js"></script>-->
 
 </body>
