@@ -211,12 +211,12 @@
               text-align: center;
           }
 
-          button {
+          #styledFormAccessButton {
               float: right;
               margin-right: 900px;     /*pushes the button to the middle*/
               background-color: #17252A;
               color: #DEF2F1;
-              border: double 4px;
+              border: #2B7A78 double 5px;
           }
 
           .volunteersImg{
@@ -225,7 +225,12 @@
               padding: 10px;
           }
 
-
+          iframe{
+              margin-left: 630px;
+              margin-top: 20px;
+              border: #2B7A78 double 5px;
+              padding: 1px;
+          }
 
 
 
@@ -309,9 +314,11 @@
             <p>If you like to volunteer with us. Please fill the form below with your login credentials and join us!</p>
 
 
-            <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+            <button id="styledFormAccessButton" onclick="document.getElementById('id01').style.display='block'">Login</button>
 
-            <img class="volunteersImg" src="volunteersIMG.jpg" />
+            <!--<img class="volunteersImg" src="volunteersIMG.jpg"/> Tried an image but decided on iframe instead to make the page more engaging for the user-->
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXb6bDX9FDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             <div id="id01" class="modal">
                 <span onclick="document.getElementById('id01').style.display='none'"
@@ -353,14 +360,6 @@
                 }
             }
         </script>
-
-
-
-
-
-
-
-
 
 
 
