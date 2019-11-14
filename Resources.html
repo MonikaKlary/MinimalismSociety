@@ -99,6 +99,7 @@
 
        /*NavBar and Footer, end-Monika*/
 
+
        /*Resources Page-Monika*/
 
         #resourcesHeadContainer {
@@ -111,7 +112,7 @@
         .resourcesText {
             color: #17252A;
             font-weight: bold;
-           letter-spacing: 3px;
+            letter-spacing: 3px;  /*the spacing makes the text more interesting and it helps to draw users attention*/
 
         }
 
@@ -130,21 +131,23 @@
             border: black solid 2px;
         }
 
-        #YTSectionHeader {
+        /*#YTSectionHeader {    decided not to implement this section as it did not fit with the rest of the page style and purpose
             border: 2px solid;
             padding: 25px;
             text-align: center;
             font-weight: bold;
             margin-top: 10px;
-        }
+        }*/
 
-        #ytVideosContainer {
+        /*#ytVideosContainer {
             position: relative;
         }
         .ytVideos {
             padding: 35px;
             display: inline-block;
-        }
+        }*/
+
+
 
         a {                   /*Makes the links more eye catching*/
             color: #3AAFA9;
@@ -152,7 +155,7 @@
         }
 
         /*The following makes the picture zoom in when page is loaded*/
-        img {
+        .card-img-top {
             animation-name: zoom;
             animation-duration: 0.6s;
         }
@@ -162,13 +165,22 @@
           to {transform:scale(1)}
         }
 
-        .announcmentContainer{
+        .announcementContainer {
             text-align: center;
-            border: double 3px;
+            border: double 4px;
             margin: 30px;
             font-weight: 300;
-            padding: 15px;
+            padding: 10px;      /*poitions the button away from the border*/
+            background-color: #17252A;
+            color: #DEF2F1;
+            margin-bottom: 5px;
         }
+
+        #changeTextButton {
+            background-color: #2B7A78;
+            border: double 3px;
+        }
+          
 
     </style>
 
@@ -217,6 +229,8 @@
     </div>
 
     <!--NavBar HTML-Monika-->
+
+
     <!--Resources Page code-Monika-->
 
     <div class="cardDeckContainerResources">
@@ -251,7 +265,7 @@
     </div>
 
 
-
+    <!--All three containers are the same code with different content, they create grid like layout on the page-->
     <div class="cardDeckContainerResources">
         <div class="card-deck">
             <div class="card">
@@ -312,17 +326,25 @@
     </div>
 
 
-    <div class="announcmentContainer">
+
+
+    <!--This is intended to be a fun interactive element of this page-->
+
+    <div class="announcementContainer">
         <h2>Find out how you can help us make this page better!</h2>
         <p id="textOne">If you're interested click here to find out the secret mission we need you for.</p>
-        <button id="changeTextButton" onclick="textChange()">Change Text</button>
+        <button id="changeTextButton" onclick="textChange()">Click me!</button>
     </div>
 
+
+
+    <!--Javascript code-->
     <script>
 
         function textChange() {
             var accessText = document.getElementById("textOne");
 
+            //The text is swapped when the button is clicked, once clicked again it is changed to another text
             if (accessText.innerHTML === "If you're interested click here to find out the secret mission we need you for.") {
                 accessText.innerHTML = "We're looking for a Resources Editor! If you're interested come down for a chat at the Student Union and ask for Monika. The responsibilities include: content editing, finding new sources of information about minimalism, working with the Web Dev team on the design of our website and much more! Training will be provided, all we need is your enthusiasm and willingness to learn. We hope to see you soon!"
             } else {
@@ -332,7 +354,9 @@
 
     </script>
 
-    <!--Decided not to use the YT section-->
+
+    <!--Decided not to use the YT section, it did not feel like a right fit with the pintrest-like layout-->
+
     <!--<div id="YTSectionHeader">
 
         <h1 class="">Check This Videos Out To Get You Started:</h1>
@@ -360,6 +384,9 @@
     </div>-->
     <!--Footer for all the pages-->
 
+
+
+
     <div class="containerFooter">
 
         <div class="footer">
@@ -370,12 +397,14 @@
     </div>
 
     <!--Footer end-->
+
+
+    <!--Needed this for my bootstrap elements to work-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!--<script type="text/javascript" src="loadNavbar.js"></script>-->
 
 </body>
 </html>
