@@ -120,7 +120,7 @@
             width: 600px;
         }
 
-         /*NavBar and Footer, end-Monika*/
+        /*NavBar and Footer, end-Monika*/
 
 
        /*Gallery Siddhard and Monika*/
@@ -132,7 +132,7 @@
 
         /* Slideshow container */
         .slideshowContainer {
-            max-width: 90%;
+            max-width: 70%;
             position: relative;
             margin: auto;                      /*horizontally centers the element*/
             border: double 3px;
@@ -171,16 +171,21 @@
             }
 
 
-        .CaptionText {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
+        /*.CaptionText {
             position: absolute;
+            font-size: 30px;
+            padding-left: 300px;
             bottom: 8px;
             width: 100%;
-            text-align: center;
-        }
+            font-weight: bold;
+        }*/
 
+        .imgText {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 15px;
+        }
 
         /* The dots/bullets/indicators */
         .dot {
@@ -224,6 +229,7 @@
                 opacity: 1
             }
         }
+
 
     </style>
 
@@ -280,39 +286,48 @@
 
 
         <div class="mySlides fade">
-
-            <img src="img1.jpg" style="width:100%">
-            <div class="Captiontext">Caption Text</div>
+            <img src="galleryImg/img1.jpeg" style="width:100%">
+            <p class="imgText">"Minimalism is not the lack of something. It is simply the perfect amount of something."</p>
         </div>
 
         <div class="mySlides fade">
-
-            <img src="img2.jpg" style="width:100%">
-            <div class="Captiontext">Caption Two</div>
+            <img src="galleryImg/img2.jpg" style="width:100%">
+            <p class="imgText">"Quality not quantity."</p>
         </div>
 
         <div class="mySlides fade">
-
-            <img src="img3.jpg" style="width:100%">
-            <div class="Captiontext">Caption Three</div>
+            <img src="galleryImg/img3.jpg" style="width:100%">
+            <p class="imgText">"Minimalism allows you to focus on your true passions"</p>
         </div>
 
         <div class="mySlides fade">
-
-            <img src="img1.jpg" style="width:100%">
-            <div class="Captiontext">Caption Text</div>
+            <img src="galleryImg/img4.jpg" style="width:100%">
+            <p class="imgText">"Best food for healthy life."</p>
         </div>
 
         <div class="mySlides fade">
-
-            <img src="img1.jpg" style="width:100%">
-            <div class="Captiontext">Caption Text</div>
+            <img src="galleryImg/img5.jpg" style="width:100%">
+            <p class="imgText">"My goal is no longer to get more done, but rather to have less to do."</p>
         </div>
 
         <div class="mySlides fade">
+            <img src="galleryImg/img6.jpg" style="width:100%">
+            <p class="imgText">"It is always the simple that produces the marvelous."</p>
+        </div>
 
-            <img src="img1.jpg" style="width:100%">
-            <div class="Captiontext">Caption Text</div>
+        <div class="mySlides fade">
+            <img src="galleryImg/img7.jpg" style="width:100%">
+            <p class="imgText">"Holding on memories doesnot mean holding on to possessions."</p>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="galleryImg/img8.jpg" style="width:100%">
+            <p class="imgText">"All you need is less."</p>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="galleryImg/img9.jpg" style="width:100%">
+            <p class="imgText">"Simplicity is the ultimate sophistication."</p>
         </div>
 
 
@@ -320,6 +335,7 @@
         <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
         <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
     <br>
 
     <!-- The dots/circles -->
@@ -327,6 +343,12 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
     </div>
 
 
@@ -354,7 +376,7 @@
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (count = 0; count < slides.length; count++) {
-                slides[i].style.display = "none";
+                slides[count].style.display = "none";
             }
             for (count = 0; count < dots.length; count++) {
                 dots[count].className = dots[count].className.replace(" active", "");
