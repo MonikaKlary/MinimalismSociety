@@ -130,6 +130,7 @@
             box-sizing: border-box       /*The * selector sets all elements to zero margins, so they look the same in all browsers*/
         } 
 
+
         /* Slideshow container */
         .slideshowContainer {
             max-width: 70%;
@@ -171,15 +172,6 @@
             }
 
 
-        /*.CaptionText {
-            position: absolute;
-            font-size: 30px;
-            padding-left: 300px;
-            bottom: 8px;
-            width: 100%;
-            font-weight: bold;
-        }*/
-
         .imgText {
             font-size: 20px;
             text-align: center;
@@ -202,23 +194,26 @@
                 background-color: #717171;
             }
 
+
         /* Fading animation */
         .fade {
             -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
+            -webkit-animation-duration: 5s;
             animation-name: fade;
-            animation-duration: 1.5s;
+            animation-duration: 5s;
         }
+
 
         @-webkit-keyframes fade {
             from {
-                opacity: .4
+                opacity: .4                 /*This css section makes the images fade in when loading*/
             }
 
             to {
                 opacity: 1
             }
         }
+
 
         @keyframes fade {
             from {
