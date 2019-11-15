@@ -166,10 +166,10 @@
             border-radius: 3px 0 0 3px;
         }
 
-            /* On hover, add a black background color with a little bit see-through */
-            .prevButton:hover, .nextButton:hover {
-                background-color: rgba(0,0,0,0.8);
-            }
+        /* On hover, add a black background color with a little bit see-through */
+        .prevButton:hover, .nextButton:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
 
 
         .imgText {
@@ -190,39 +190,30 @@
             transition: background-color 0.6s ease;
         }
 
-            .active, .dot:hover {
-                background-color: #717171;
-            }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
 
 
         /* Fading animation */
         .fade {
             -webkit-animation-name: fade;
-            -webkit-animation-duration: 5s;
+            -webkit-animation-duration: 1.0s;
             animation-name: fade;
-            animation-duration: 5s;
+            animation-duration: 1.0s;
+            animation-fill-mode: forwards; /*This property is required so that the final animation keyframes are retained when the animation ends*/
         }
 
-
+        /*This css section makes the images fade in when loading*/
         @-webkit-keyframes fade {
-            from {
-                opacity: .4                 /*This css section makes the images fade in when loading*/
-            }
-
-            to {
-                opacity: 1
-            }
+            from {opacity: .4}
+            to {opacity: 1}
         }
 
 
         @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
+            from {opacity: .4}
+            to {opacity: 1}
         }
 
 
@@ -292,12 +283,12 @@
 
         <div class="mySlides fade">
             <img src="galleryImg/img3.jpg" style="width:100%">
-            <p class="imgText">"Minimalism allows you to focus on your true passions"</p>
+            <p class="imgText">"Minimalism allows you to focus on your true passions."</p>
         </div>
 
         <div class="mySlides fade">
             <img src="galleryImg/img4.jpg" style="width:100%">
-            <p class="imgText">"Best food for healthy life."</p>
+            <p class="imgText">"Best food for a healthy life."</p>
         </div>
 
         <div class="mySlides fade">
@@ -312,7 +303,7 @@
 
         <div class="mySlides fade">
             <img src="galleryImg/img7.jpg" style="width:100%">
-            <p class="imgText">"Holding on memories doesnot mean holding on to possessions."</p>
+            <p class="imgText">"Holding on to memories doesn't mean holding on to possessions."</p>
         </div>
 
         <div class="mySlides fade">
@@ -364,21 +355,28 @@
             showSlides(slideIndex = n);
         }
 
-        function showSlides(n) {
-            var count;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (count = 0; count < slides.length; count++) {
-                slides[count].style.display = "none";
-            }
-            for (count = 0; count < dots.length; count++) {
-                dots[count].className = dots[count].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+    function showSlides(n) {
+        console.log("Showing slides");
+        var count;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length)
+        {
+            slideIndex = 1
         }
+        if (n < 1)
+        {
+            slideIndex = slides.length
+        }
+        for (count = 0; count < slides.length; count++) {
+            slides[count].style.display = "none";
+        }
+        for (count = 0; count < dots.length; count++) {
+            dots[count].className = dots[count].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 
     </script>
 
