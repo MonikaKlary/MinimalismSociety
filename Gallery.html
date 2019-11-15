@@ -1,6 +1,8 @@
-﻿<!doctype html>
-<html lang="en">
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8" />
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,12 +11,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="minimalismSocietyCSS.css" />
-
     <title>Minimalism Society</title>
 
+
     <style>
-        
+  
         /*NavBar-Monika*/
         body {
             margin: 0;
@@ -121,137 +122,113 @@
 
          /*NavBar and Footer, end-Monika*/
 
-       
-        /*image galleryCss/Siddharth*/
 
-        figure1{
-        float: left;
-        width: 22%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
-        clear:both;
+       /*Gallery Siddhard and Monika*/
+
+
+        * {
+            box-sizing: border-box       /*The * selector sets all elements to zero margins, so they look the same in all browsers*/
+        } 
+
+        /* Slideshow container */
+        .slideshowContainer {
+            max-width: 90%;
+            position: relative;
+            margin: auto;                      /*horizontally centers the element*/
+            border: double 3px;
         }
-        figure2{
-        float: left;
-        width: 22%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
+
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
         }
-        figure3{
-        float: left;
-        width: 20%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
+
+        /* Next & previous buttons */
+        .prevButton, .nextButton {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease; /*Sets the pace of image transition between slides*/
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
-        figure4{
-            float: left;
-            width: 27%;
+
+        /* Position the "next button" to the right */
+        .nextButton {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prevButton:hover, .nextButton:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+
+        .CaptionText {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
             text-align: center;
-            font-style: italic;
-            font-size: smaller;
-            text-indent: 0;
-            border: thin black solid;
-            margin: 0.5em;
-            padding: 0.5em;
         }
-        figure5{
-        float: left;
-        width: 38%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
-        clear:both;
+
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block; /*Displays them alongside each other*/
+            transition: background-color 0.6s ease;
         }
-        figure6{
-            float: left;
-        width: 33%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
         }
-        figure7{
-            float: left;
-        width: 22%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
-        figure8{
-            float: left;
-        width: 22%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
-        clear: both;
-        }
-        figure9{
-            float: left;
-        width: 22%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
-        }
-        figure10{
-            float: left;
-        width: 25%;
-        text-align: center;
-        font-style: italic;
-        font-size: smaller;
-        text-indent: 0;
-        border: thin black solid;
-        margin: 0.5em;
-        padding: 0.5em;
-        }
-        figure11{
-            float: left;
-            width: 22%;
-            text-align: center;
-            font-style: italic;
-            font-size: smaller;
-            text-indent: 0;
-            border: thin black solid;
-            margin: 0.5em;
-            padding: 0.5em;
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
 
     </style>
 
 </head>
+
 
 <body>
 
@@ -297,79 +274,96 @@
     <!--NavBar HTML-Monika-->
 
 
+    <!--Gallery HTML Siddhart and Monika-->
 
-    <body>
-        <figure1>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="cycle.jpg" alt="">
-            <figcaption><b>Figure1.Holding on memories doesnot mean holding on to possessions.</b></figcaption>
-        </figure1>
-
-        <figure2>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="room.jpg" alt="">
-            <fifcaption><b>Figure2.Simplicity is the ultimate sophistication.</b></fifcaption>
-        </figure2>
-
-        <figure3>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="travelling.jpg" alt="">
-            <figcaption><b>Figure3.It is always the simple that produces the marvelous.</b></figcaption>
-        </figure3>
-
-        <figure4>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="arrangement.jpg" alt="">
-            <figcaption><b>Figure4.All you need is less.</b></figcaption>
-        </figure4>
-
-        <figure5>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="bedroom.jpg" alt="">
-            <figcaption><b>Figure5.The more stuff you own,the more your stuff owns you.</b></figcaption>
-        </figure5>
-
-        <figure6>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="kitchen.jpg" alt="">
-            <figcaption><b>Figure6.Quality not quantity.</b></figcaption>
-        </figure6>
-
-        <figure7>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="bagpack.jpg" alt="">
-            <figcaption><b>Figure7.Gears for hiking.</b></figcaption>
-        </figure7>
-
-        <figure8>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="platter.jpg" alt="">
-            <figcaption><b>Figure8.Best food for healthy life.</b></figcaption>
-        </figure8>
-
-        <figure9>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="packaging.jpg" alt="">
-            <figcapton><b>Figure9.Best tips to packaging as a minimalist.</b></figcapton>
-        </figure9>
-
-        <figure10>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="box.jpg" alt="">
-            <figcaption><b>Figure10.Minimalism is not the lack of something. It is simply the perfect amount of something.</b></figcaption>
-        </figure10>
-
-        <figure11>
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="books.jpg" alt="">
-            <figcaption><b>Figure11.Book case a minimalist should have</b></figcaption>
-        </figure11>
+    <div class="slideshowContainer">
 
 
-        <script>
-            function bigImg(x) {
-                x.style.height = "350px";
-                x.style.width = "330px";
+        <div class="mySlides fade">
+
+            <img src="img1.jpg" style="width:100%">
+            <div class="Captiontext">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img2.jpg" style="width:100%">
+            <div class="Captiontext">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img3.jpg" style="width:100%">
+            <div class="Captiontext">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img1.jpg" style="width:100%">
+            <div class="Captiontext">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img1.jpg" style="width:100%">
+            <div class="Captiontext">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img1.jpg" style="width:100%">
+            <div class="Captiontext">Caption Text</div>
+        </div>
+
+
+        <!-- Next and previous buttons -->
+        <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+
+
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var count;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (count = 0; count < slides.length; count++) {
+                slides[i].style.display = "none";
             }
-
-            function normalImg(x) {
-                x.style.height = "300px";
-                x.style.width = "300px";
+            for (count = 0; count < dots.length; count++) {
+                dots[count].className = dots[count].className.replace(" active", "");
             }
-        </script>
-    </body>
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
 
-
-
+    </script>
 
 
 
@@ -385,12 +379,7 @@
     </div>
 
     <!--Footer end-->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!--<script type="text/javascript" src="loadNavbar.js"></script>-->
 
 </body>
 </html>
