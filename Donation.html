@@ -301,6 +301,28 @@
 	        position: relative;
             cursor: pointer;
         }
+	    
+	 .thankyou{
+            text-align: center;
+            background-color: #DEF2F1;
+        }
+
+        .thankyou p, h1{
+            color: #17252A;
+        }
+
+        .modal {
+            position: fixed; 
+            margin-left: 30%;
+            margin-right: 30%; 
+            margin-top: 200px;     
+            width: 40%; 
+            height: 100%; 
+        }
+
+        .close{
+            cursor: pointer;
+        }
 
         /*DonationPageEnds*/
 
@@ -434,8 +456,25 @@
             </div>
 
             <!--Creates the comfirm donation button-->
+             <!--Creates the comfirm donation button-->
             <div>
-                <button class="donate-button">Donate Now</button>
+                <button id="donateButton" class="donate-button">Donate Now</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="thankyou">
+                    <span class="close">&times;</span>
+                    <h1>Thank you for the donation</h1>
+                    <p><strong>Please Check Your Email For The Receipt</strong></p>
+                    <hr>
+                    <p>Reciept did not come through <a href="ContactUs.html">Contact Us!</a></p>
+                    <a href="index.html">
+                        <button class="hompage">Homepage</button>
+                    </a>
+                </div>
+      
+                </div>
             </div>
         </div>
     </div>
@@ -460,5 +499,33 @@
 
     <!--<script type="text/javascript" src="loadNavbar.js"></script>-->
 
+	
+    <script>
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("donateButton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
 </body>
 </html>
